@@ -1,0 +1,143 @@
+/* --------------------------------- search --------------------------------- */
+
+.c-search {
+  display: block;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  background-color: $main-bg-cl;
+  pointer-events: none;
+  visibility: hidden;
+  transition: transform 0.5s cubic-bezier(0.645, 0.045, 0.355, 1),
+  visibility 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  z-index: 1100;
+  transform: translateY(-100%);
+
+  &.is-open {
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0);
+  }
+
+  &_container {
+    width: auto;
+    overflow: auto;
+    max-height: calc(100vh - 200px);
+    padding: 60px 60px 70px;
+
+    @include maxW(1023px) {
+      padding: 25px 22px 30px;
+    }
+  }
+
+  &_inner {
+    width: 51.55%;
+    margin: 0 auto;
+
+    p {
+      font-size: 2rem;
+      line-height: 1.68;
+      margin-bottom: 15px;
+    }
+
+    @include maxW(1023px) {
+      width: 100%;
+
+      p {
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  &_bar {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #dbdbdb;
+  }
+
+  &_form {
+    position: relative;
+    padding: 30px 25px 30px 0;
+    display: flex;
+    align-items: center;
+    flex: 1 0 auto;
+
+    @include maxW(1023px) {
+      padding: 5px 20px 10px 0;
+    }
+  }
+
+  &_icon {
+    position: relative;
+    top: 0;
+    transform: translateY(0);
+    right: auto;
+    margin-right: 20px;
+
+    span.icon-search {
+      display: inline-block;
+    }
+
+    @include maxW(1023px) {
+      top: 2px;
+      margin-right: 15px;
+
+      span.icon-search svg {
+        width: 17px;
+        height: 17px;
+      }
+    }
+  }
+
+  &_input {
+    text-transform: none;
+    color: $black-cl;
+    font-size: 1.5rem;
+    line-height: 1.67;
+    letter-spacing: -0.3px;
+    font-weight: 400;
+    padding-bottom: 0;
+    background: none;
+    width: 100%;
+    border: none;
+    vertical-align: middle;
+
+    @include maxW(1023px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  input[type="search"]::-webkit-search-cancel-button {
+    display: none;
+  }
+
+  &_close {
+    position: static;
+    top: auto;
+    right: auto;
+    margin-top: -3px;
+    margin-right: 20px;
+    padding: 5px;
+    cursor: pointer;
+
+    @include maxW(1023px) {
+      margin-top: -4px;
+      margin-right: 10px;
+
+      svg.icon-close {
+        width: 12px;
+        height: 12px;
+      }
+    }
+  }
+
+  &_result {
+    display: none;
+
+    &.is-exist {
+      display: block;
+    }
+  }
+}

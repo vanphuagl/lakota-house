@@ -1,0 +1,24 @@
+@charset 'utf-8';
+
+/* Core variables and mixins */
+@import "imports/core/libs";
+@import "imports/core/reset";
+@import "imports/core/variables";
+@import "imports/core/mixins";
+@import "imports/core/layouts";
+@import "imports/core/components";
+
+/* header, footer */
+@import "imports/core/header";
+@import "imports/core/footer";
+
+/* components */
+@import "imports/components/menu";
+@import "imports/components/search";
+@import "imports/components/cart";
+
+/* pages */
+@import "imports/pages/home";
+
+/* utils */
+@import "imports/core/utils";

@@ -1,0 +1,22 @@
+/* -------------------------------------------------------------------------- */
+/*                                  home page                                 */
+/* -------------------------------------------------------------------------- */
+
+.homepage {
+  /* mainvisual */
+  .mainvisual {
+    position: relative;
+
+    &_container {
+      background-color: #91916c;
+      height: 100%;
+    }
+  }
+
+  /* collection */
+  .collection {
+    &_container {
+      height: 200vh;
+    }
+  }
+}

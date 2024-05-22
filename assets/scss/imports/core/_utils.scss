@@ -1,0 +1,70 @@
+/* Utils
+------------------------------------------------------------*/
+
+/* hover link */
+.u-hoverlink {
+  position: relative;
+  display: inline-block;
+  color: currentColor;
+  cursor: pointer;
+
+  &:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    display: block;
+    height: 2px;
+    background: currentColor;
+    transition: width 0.35s ease 0s, opacity 0.35s ease 0s;
+    opacity: 0.6;
+    width: 0;
+  }
+
+  &:hover,
+  &.active-link {
+    &:after {
+      width: 100%;
+      opacity: 1;
+    }
+  }
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+/* text color */
+.white-txt {
+  color: #fff;
+}
+
+/* fonts */
+.fonts-hiragino {
+  font-family: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
+}
+
+.fonts-itc {
+  font-family: "itc-benguiat", serif;
+}
+
+.fonts-itc-condensed {
+  font-family: "itc-benguiat-condensed", sans-serif;
+}
+
+/* only device */
+
+.sp-only,
+.is-hidden {
+  display: none !important;
+}
+
+@include maxW(1023px) {
+  .pc-only {
+    display: none !important;
+  }
+
+  .sp-only {
+    display: block !important;
+  }
+}
