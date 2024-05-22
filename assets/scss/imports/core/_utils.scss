@@ -3,29 +3,36 @@
 
 /* hover link */
 .u-hoverlink {
-  position: relative;
-  display: inline-block;
-  color: currentColor;
-  cursor: pointer;
+  a,
+  p {
+    position: relative;
+    display: inline-block;
+    color: currentColor;
+    cursor: pointer;
+    z-index: 10;
 
-  &:after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    display: block;
-    height: 2px;
-    background: currentColor;
-    transition: width 0.35s ease 0s, opacity 0.35s ease 0s;
-    opacity: 0.6;
-    width: 0;
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      display: block;
+      height: 2px;
+      background: currentColor;
+      transition: width 0.35s ease 0s, opacity 0.35s ease 0s;
+      opacity: 0.6;
+      width: 0;
+    }
   }
 
   &:hover,
   &.active-link {
-    &:after {
-      width: 100%;
-      opacity: 1;
+    p,
+    a {
+      &:after {
+        width: 100%;
+        opacity: 1;
+      }
     }
   }
 }

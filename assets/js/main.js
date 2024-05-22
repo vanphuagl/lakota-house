@@ -107,6 +107,14 @@ $(".js-cart-checkbox").change(function () {
   }
 });
 
+/* ---------------------------------- mega ---------------------------------- */
+
+$(".c-header .js-show-mega").hover(function () {
+  $(".c-header").addClass("open-mega");
+}, function () {
+  $(".c-header").removeClass("open-mega");
+});
+
 /* --------------------------------- archor --------------------------------- */
 
 $(document).on(

@@ -1,0 +1,22 @@
+/* ---------------------------------- mega ---------------------------------- */
+
+.c-mega {
+  position: absolute;
+  width: 100%;
+  height: auto;
+  left: 0;
+  top: 0;
+  overflow: auto;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+
+  &_inner {
+    padding-top: 150px;
+    padding-bottom: 500px;
+    background-color: #F7F5EF;
+  }
+}
