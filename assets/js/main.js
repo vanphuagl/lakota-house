@@ -16,6 +16,7 @@ const appHeight = () => {
   );
 
   document.getElementById("cmenu").style.height = windowHeight + "px";
+  document.getElementById("ccart").style.height = windowHeight + "px";
 };
 window.addEventListener("resize", appHeight);
 appHeight();

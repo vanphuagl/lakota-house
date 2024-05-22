@@ -19,11 +19,19 @@
 
   .mt {
     margin-top: 40px;
+
+    @include maxW(1023px) {
+      margin-top: 35px;
+    }
   }
 
   .border {
     padding-bottom: 40px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+
+    @include maxW(1023px) {
+      padding-bottom: 35px;
+    }
   }
 
   &_container {
@@ -55,6 +63,10 @@
     height: 100%;
     position: relative;
     flex: 1 1 auto;
+
+    @include maxW(1023px) {
+      padding: 25px 22px 15px;
+    }
   }
 
   &_top {
@@ -67,6 +79,13 @@
       font-weight: 500;
       line-height: 1.68;
     }
+
+    @include maxW(1023px) {
+      h2 {
+        font-size: 1.6rem;
+        line-height: 1.63;
+      }
+    }
   }
 
   &_close {
@@ -78,12 +97,18 @@
         width: 22px;
       }
     }
+
+    @include maxW(1023px) {
+      &.is-open {
+        span {
+          width: 16px;
+        }
+      }
+    }
   }
 
   &_list {
     margin-top: 35px;
-    padding-bottom: 40px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   }
 
   &_items {
@@ -94,6 +119,11 @@
 
     &:last-child {
       margin-bottom: initial;
+    }
+
+    @include maxW(1023px) {
+      grid-template-columns: 47.3% 1fr;
+      margin-bottom: 35px;
     }
 
     &_img {
@@ -110,11 +140,21 @@
         mix-blend-mode: multiply;
         pointer-events: none;
       }
+
+      @include maxW(1023px) {
+        padding: 25px;
+      }
     }
 
     &_info {
-      .product-name,
-      .product-price {
+      display: flex;
+      flex-direction: column;
+
+      .group {
+        flex: 1 1 auto;
+      }
+
+      .product-name {
         font-size: 1.6rem;
         line-height: 1.66;
       }
@@ -133,7 +173,7 @@
           width: 100%;
 
           th {
-            width: 40%;
+            width: 45%;
           }
 
           th,
@@ -149,13 +189,38 @@
       .product-price {
         margin-top: 25px;
       }
+
+      @include maxW(1023px) {
+        .product-name {
+          font-size: 1.4rem;
+          line-height: 1.64;
+        }
+
+        .product-brand {
+          font-size: 1.3rem;
+          line-height: 1.62;
+        }
+
+        .product-meta {
+          table {
+            th,
+            td {
+              font-size: 1.3rem;
+              line-height: 1.62;
+            }
+          }
+        }
+
+        .product-price {
+          margin-top: 18px;
+        }
+      }
     }
 
     &_qty {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 15px;
 
       input {
         background-color: transparent;
@@ -165,6 +230,11 @@
         line-height: 1.68;
         width: 42px;
         text-align: left;
+
+        @include maxW(1023px) {
+          font-size: 1.3rem;
+          line-height: 1.62;
+        }
       }
 
       .control {
@@ -217,6 +287,18 @@
       font-size: 1.2rem;
       margin-left: 5px;
     }
+
+    @include maxW(1023px) {
+      h3,
+      p {
+        font-size: 1.4rem;
+      }
+
+      span {
+        font-size: 1.1rem;
+        margin-left: 2px;
+      }
+    }
   }
 
   &_checkout {
@@ -230,6 +312,13 @@
       color: $black-cl;
       border: 0;
       font-size: 1.6rem;
+    }
+
+    @include maxW(1023px) {
+      padding: 20px 22px;
+      button {
+        font-size: 1.4rem;
+      }
     }
   }
 
@@ -276,6 +365,11 @@
           z-index: 2;
           opacity: 0;
         }
+
+        @include maxW(1023px) {
+          width: 12px;
+          height: 12px;
+        }
       }
     }
 
@@ -297,6 +391,22 @@
         letter-spacing: -0.48px;
         opacity: 0.5;
       }
+
+      @include maxW(1023px) {
+        padding-left: 25px;
+
+        h3 {
+          font-size: 1.3rem;
+          letter-spacing: -0.52px;
+          margin-bottom: 5px;
+        }
+
+        p {
+          font-size: 1.1rem;
+          line-height: 1.68;
+          letter-spacing: -0.44px;
+        }
+      }
     }
   }
 
@@ -311,17 +421,29 @@
     textarea {
       width: 100%;
       margin: 0;
-      padding: 0;
+      padding: 2px 4px;
       border: 1px solid rgba($color: #f7f5ee, $alpha: 0.3);
       background-color: transparent;
       outline: none;
       box-sizing: border-box;
       font-size: 1.4rem;
       font-weight: 400;
-      line-height: 1.2;
+      line-height: 1.4;
       color: $white-cl;
       position: relative;
       -webkit-appearance: none;
+    }
+
+    @include maxW(1023px) {
+      h3 {
+        font-size: 1.3rem;
+        letter-spacing: -0.52px;
+        margin-bottom: 12px;
+      }
+
+      textarea {
+        font-size: 1.3rem;
+      }
     }
   }
 
@@ -331,12 +453,18 @@
       line-height: 1.66;
       font-weight: 300;
     }
+
+    @include maxW(1023px) {
+      h3 {
+        font-size: 1.3rem;
+        letter-spacing: -0.52px;
+      }
+    }
   }
 
   &_select {
     display: flex;
     align-items: center;
-    gap: 20px;
 
     p {
       width: 30%;
@@ -345,7 +473,8 @@
     }
 
     select {
-      background: transparent;
+      background: url(../img/arrow.svg) no-repeat center right transparent;
+      background-size: 14px auto;
       color: $white-cl;
       font-size: 1.5rem;
       line-height: 1.55;
@@ -353,9 +482,9 @@
       padding: 0;
       border: 0;
       outline: 0;
-      padding-right: 20px;
+      padding-right: 30px;
       box-sizing: border-box;
-      //   -webkit-appearance: none;
+      -webkit-appearance: none;
 
       option {
         color: $black-cl;
@@ -365,6 +494,23 @@
     &_date {
       margin-top: 35px;
       margin-bottom: 15px;
+    }
+
+    @include maxW(1023px) {
+      p,
+      select {
+        font-size: 1.3rem;
+        letter-spacing: -0.52px;
+      }
+
+      select {
+        background-size: 10px auto;
+      }
+
+      &_date {
+        margin-top: 25px;
+        margin-bottom: 10px;
+      }
     }
   }
 }

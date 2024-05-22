@@ -421,7 +421,7 @@
     <!-- @@search -->
 
     <!-- @cart -->
-    <div class="c-cart js-c-cart">
+    <div class="c-cart js-c-cart" id="ccart">
         <div class="c-cart_container">
             <div class="c-cart_inner">
                 <div class="c-cart_top">
@@ -433,53 +433,54 @@
                     </buttons>
                 </div>
 
-                <div class="c-cart_list">
+                <div class="c-cart_list border">
                     <div class="c-cart_items">
                         <div class="c-cart_items_img">
                             <img src="/assets/img/items.png" alt="Product Name" loading="lazy" width="130" height="130">
                         </div>
 
                         <div class="c-cart_items_info">
-                            <a href="#" class="product-name">Product Name</a>
-                            <a href="#" class="product-brand">Alden</a>
-
-                            <div class="product-meta">
-                                <table>
-                                    <tbody>
-                                        <tr class="size">
-                                            <th>Size:</th>
-                                            <td>6 1/2</td>
-                                        </tr>
-                                        <tr class="color">
-                                            <th>Color:</th>
-                                            <td>Black</td>
-                                        </tr>
-                                        <tr class="quantity">
-                                            <th>Quantity</th>
-                                            <td>
-                                                <div class="c-cart_items_qty">
-                                                    <input id="qty-1" class="c-cart_items_qty_number js-cart-qty-number"
-                                                        type="number" value="1" data-line="1" readonly="">
-
-                                                    <div class="control">
-                                                        <button type="button"
-                                                            class="c-cart_items_qty_button js-cart-qty-increase"
-                                                            data-line="1">
-                                                            <span></span>
-                                                            <span></span>
-                                                        </button>
-                                                        <button type="button"
-                                                            class="c-cart-items_qty_button js-cart-qty-descrease"
-                                                            data-line="1">
-                                                            <span></span>
-                                                        </button>
+                            <div class="group">
+                                <a href="#" class="product-name">Product Name</a>
+                                <a href="#" class="product-brand">Alden</a>
+                                <div class="product-meta">
+                                    <table>
+                                        <tbody>
+                                            <tr class="size">
+                                                <th>Size:</th>
+                                                <td>6 1/2</td>
+                                            </tr>
+                                            <tr class="color">
+                                                <th>Color:</th>
+                                                <td>Black</td>
+                                            </tr>
+                                            <tr class="quantity">
+                                                <th>Quantity</th>
+                                                <td>
+                                                    <div class="c-cart_items_qty">
+                                                        <input id="qty-1" class="c-cart_items_qty_number js-cart-qty-number"
+                                                            type="number" value="1" data-line="1" readonly="">
+    
+                                                        <div class="control">
+                                                            <button type="button"
+                                                                class="c-cart_items_qty_button js-cart-qty-increase"
+                                                                data-line="1">
+                                                                <span></span>
+                                                                <span></span>
+                                                            </button>
+                                                            <button type="button"
+                                                                class="c-cart-items_qty_button js-cart-qty-descrease"
+                                                                data-line="1">
+                                                                <span></span>
+                                                            </button>
+                                                        </div>
+    
                                                     </div>
-
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
 
                             <div class="product-price c-cart_price">
