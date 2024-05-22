@@ -112,7 +112,17 @@ $(".js-cart-checkbox").change(function () {
 $(".c-header .js-show-mega").hover(function () {
   $(".c-header").addClass("open-mega");
 }, function () {
-  $(".c-header").removeClass("open-mega");
+  $(".c-header").addClass("open-mega");
+});
+
+$(document).on("click", ".tab-link", function () {
+  let tabID = $(this).attr("data-tab");
+
+  $(this).addClass("active").siblings().removeClass("active");
+  $("#tab-" + tabID)
+    .addClass("active")
+    .siblings()
+    .removeClass("active");
 });
 
 /* --------------------------------- archor --------------------------------- */

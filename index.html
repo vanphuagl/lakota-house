@@ -69,21 +69,113 @@
         <div class="c-header_container">
             <div class="c-header_left">
                 <ul class="c-header_list">
-                    <li class="u-hoverlink pc-only js-show-mega">
-                        <a href="/product.html">Product</a>
+                    <li class="pc-only js-show-mega">
+                        <div class="u-hoverlink">
+                            <a href="/product.html">Product</a>
+                        </div>
 
                         <div class="c-mega">
-                            <div class="c-mega_inner">
-                                hello
+                            <div class="c-mega_container">
+                                <div class="c-mega_inner">
+                                    <div class="c-mega_left">
+                                        <p class="tab-link active" data-tab="brand">Brand</p>
+                                        <p class="tab-link" data-tab="type">Type</p>
+                                        <a href="#" class="u-hoverlink-2">View All</a>
+                                    </div>
+                                    <div class="c-mega_right">
+                                        <div class="c-mega_tabs active" id="tab-brand">
+                                            <div class="c-mega_list">
+                                                <a href="#" class="c-mega_items">
+                                                    <figure>
+                                                        <img src="/assets/img/items.png" alt="Alden" width="146" height="146">
+                                                    </figure>
+                                                    <p>Alden</p>
+                                                </a>
+                                                <a href="#" class="c-mega_items">
+                                                    <figure></figure>
+                                                    <p>Alden Exclusive</p>
+                                                </a>
+                                                <a href="#" class="c-mega_items">
+                                                    <figure></figure>
+                                                    <p>The Lakota House</p>
+                                                </a>
+                                                <a href="#" class="c-mega_items">
+                                                    <figure></figure>
+                                                    <p>Nantucket Basket</p>
+                                                </a>
+                                                <a href="#" class="c-mega_items">
+                                                    <figure></figure>
+                                                    <p>The Lakota Selection</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="c-mega_tabs" id="tab-type">
+                                            <div class="c-mega_list">
+                                                <a href="#" class="c-mega_items">
+                                                    <figure>
+                                                        <img src="/assets/img/items.png" alt="Shoes" width="146" height="146">
+                                                    </figure>
+                                                    <p>Shoes</p>
+                                                </a>
+                                                <a href="#" class="c-mega_items">
+                                                    <figure></figure>
+                                                    <p>Belt</p>
+                                                </a>
+                                                <a href="#" class="c-mega_items">
+                                                    <figure></figure>
+                                                    <p>Wallet</p>
+                                                </a>
+                                                <a href="#" class="c-mega_items">
+                                                    <figure></figure>
+                                                    <p>Accessories</p>
+                                                </a>
+                                                <a href="#" class="c-mega_items">
+                                                    <figure></figure>
+                                                    <p>Socks</p>
+                                                </a>
+                                                <a href="#" class="c-mega_items">
+                                                    <figure></figure>
+                                                    <p>Shoecare</p>
+                                                </a>
+                                                <a href="#" class="c-mega_items">
+                                                    <figure></figure>
+                                                    <p>Shoelace</p>
+                                                </a>
+                                                <a href="#" class="c-mega_items">
+                                                    <figure></figure>
+                                                    <p>Basket</p>
+                                                </a>
+                                                <a href="#" class="c-mega_items">
+                                                    <figure></figure>
+                                                    <p>Others</p>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </li>
-                    <li class="u-hoverlink pc-only"><a href="/journal.html">Journal</a></li>
-                    <li class="u-hoverlink pc-only"><a href="/repairt.html">Repair / Care</a></li>
-                    <li class="u-hoverlink pc-only"><a href="/shop.html">Shop</a></li>
+                    <li class="pc-only">
+                        <div class="u-hoverlink">
+                            <a href="/journal.html">Journal</a>
+                        </div>
+                    </li>
+                    <li class="pc-only">
+                        <div class="u-hoverlink">
+                            <a href="/repairt.html">Repair / Care</a>
+                        </div>
+                    </li>
+                    <li class="pc-only">
+                        <div class="u-hoverlink">
+                            <a href="/shop.html">Shop</a>
+                        </div>
+                    </li>
 
-                    <li class="u-hoverlink sp-only">
-                        <p class="c-btnCart js-btn-cart">Cart (<span>0</span>)</p>
+                    <li class="sp-only">
+                        <div class="u-hoverlink">
+                            <p class="c-btnCart js-btn-cart">Cart (<span>0</span>)</p>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -226,13 +318,17 @@
             </div>
             <div class="c-header_right">
                 <ul class="c-header_list">
-                    <li class="u-hoverlink pc-only">
-                        <a href="/mypage.html" class="c-mypage">
-                            My Page
-                        </a>
+                    <li class="pc-only">
+                        <div class="u-hoverlink">
+                            <a href="/mypage.html" class="c-mypage">
+                                My Page
+                            </a>
+                        </div>
                     </li>
-                    <li class="u-hoverlink pc-only">
-                        <p class="c-btnCart js-btn-cart">Cart (<span>0</span>)</p>
+                    <li class="pc-only">
+                        <div class="u-hoverlink">
+                            <p class="c-btnCart js-btn-cart">Cart (<span>0</span>)</p>
+                        </div>
                     </li>
                     <li>
                         <div class="c-btnSearch js-btn-search">
@@ -466,9 +562,10 @@
                                                 <th>Quantity</th>
                                                 <td>
                                                     <div class="c-cart_items_qty">
-                                                        <input id="qty-1" class="c-cart_items_qty_number js-cart-qty-number"
+                                                        <input id="qty-1"
+                                                            class="c-cart_items_qty_number js-cart-qty-number"
                                                             type="number" value="1" data-line="1" readonly="">
-    
+
                                                         <div class="control">
                                                             <button type="button"
                                                                 class="c-cart_items_qty_button js-cart-qty-increase"
@@ -482,7 +579,7 @@
                                                                 <span></span>
                                                             </button>
                                                         </div>
-    
+
                                                     </div>
                                                 </td>
                                             </tr>
