@@ -3,11 +3,14 @@
 /* -------------------------------------------------------------------------- */
 
 .homepage {
-  .padd {
-    padding: 0 50px;
+  &_title {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.63;
 
     @include maxW(1023px) {
-      padding: 0 22px;
+      font-size: 1.8rem;
+      line-height: 1.64;
     }
   }
 
@@ -137,12 +140,22 @@
   .collection {
     &_container {
       padding-top: 200px;
+
+      @include maxW(1023px) {
+        padding-top: 120px;
+      }
     }
 
     &_list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       position: relative;
+      padding: 0 50px;
+
+      @include maxW(1023px) {
+        display: block;
+        padding: 0;
+      }
     }
 
     &_tabs {
@@ -158,23 +171,65 @@
         &.active {
           opacity: 1;
         }
+      }
 
-        h3 {
-          font-family: $itc-fonts;
-          font-size: 5.6rem;
-          font-weight: 400;
-          line-height: 1;
-          letter-spacing: -2.24px;
-          cursor: pointer;
+      @include maxW(1023px) {
+        margin-top: 20px;
+        width: 100%;
+
+        li {
+          opacity: 1;
+          margin-bottom: 75px;
+          width: 100%;
+
+          &:last-child {
+            margin-bottom: initial;
+          }
+
+          &:nth-child(even) {
+            h3 {
+              right: auto;
+            }
+
+            .collection_img {
+              margin-left: auto;
+            }
+          }
         }
       }
     }
 
-    &_left {
-      h2 {
-        font-size: 2rem;
-        font-weight: 500;
-        line-height: 1.63;
+    &_brand {
+      position: relative;
+
+      h3 {
+        font-family: $itc-fonts;
+        font-size: 5.6rem;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: -2.24px;
+        cursor: pointer;
+      }
+
+      .collection_img picture {
+        display: none;
+      }
+
+      @include maxW(1023px) {
+        h3 {
+          font-size: 3.8rem;
+          line-height: 1.61;
+          letter-spacing: -1.52px;
+          position: absolute;
+          z-index: 2;
+          top: 10px;
+          right: 0;
+          padding: 0 22px;
+        }
+
+        .collection_img picture {
+          display: block;
+        }
       }
     }
 
@@ -264,6 +319,10 @@
         -o-object-fit: cover;
         object-fit: cover;
       }
+
+      @include maxW(1023px) {
+        width: 85.55%;
+      }
     }
 
     &_content {
@@ -286,6 +345,24 @@
         line-height: 1.6;
         letter-spacing: -0.3px;
         font-family: $hira-fonts;
+        font-feature-settings: "palt" 1;
+      }
+
+      @include maxW(1023px) {
+        position: unset;
+        opacity: 1 !important;
+        visibility: visible !important;
+        pointer-events: auto !important;
+
+        margin-top: 30px;
+        padding: 0 22px;
+
+        p {
+          font-size: 1.4rem;
+          line-height: 1.55;
+          letter-spacing: -0.28px;
+          margin-bottom: 40px;
+        }
       }
     }
 
@@ -297,6 +374,10 @@
       display: inline-block;
       overflow: hidden;
       position: relative;
+
+      &.view-product {
+        display: none;
+      }
 
       &:hover {
         &:after {
@@ -313,6 +394,32 @@
         left: 0;
         backface-visibility: hidden;
         background-color: currentColor;
+      }
+
+      @include maxW(1023px) {
+        margin-top: 15px;
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 60px;
+        border: 1px solid $black-cl;
+        font-size: 1.4rem;
+
+        &:after {
+          content: unset;
+        }
+      }
+    }
+  }
+
+  /* recommend */
+  .recommend {
+    &_container {
+      margin-top: 200px;
+
+      @include maxW(1023px) {
+        margin-top: 120px;
       }
     }
   }
