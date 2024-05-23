@@ -141,6 +141,7 @@
         object-fit: cover;
         mix-blend-mode: multiply;
         pointer-events: none;
+        aspect-ratio: 1/1;
       }
 
       @include maxW(1023px) {

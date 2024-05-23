@@ -1,0 +1,60 @@
+/* ---------------------------------- card ---------------------------------- */
+
+.c-card {
+  &_img {
+    position: relative;
+
+    p.label {
+      position: absolute;
+      top: 15px;
+      padding: 0 20px;
+      z-index: 2;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+      aspect-ratio: 1/1;
+      padding: 40px;
+    }
+  }
+
+  &_box {
+    display: block;
+    z-index: 1;
+    position: relative;
+    height: 100%;
+    padding-bottom: calc(427 / 320 * 100%);
+    background-color: #efece5;
+
+    p.viewall {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &_info {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &_tag {
+    margin-top: 5px;
+    font-size: 1.5rem;
+    line-height: 1.63;
+    opacity: 0.5;
+
+    &:hover {
+        opacity: 0.5;
+    }
+  }
+}

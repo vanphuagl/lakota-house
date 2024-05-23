@@ -100,3 +100,13 @@ $(document).on("click", ".collection_tabs li", function () {
     $(".collection_thumbs li:eq(" + numberIndex + ")").addClass("active");
   }
 });
+
+/* ------------------------------- recommended ------------------------------ */
+
+const swiperRecommend = new Swiper('.js-recommend-swiper', {
+  observer: true,
+  observeParents: true,
+  slidesPerView: 4,
+  spaceBetween: 20,
+  grabCursor: true
+});

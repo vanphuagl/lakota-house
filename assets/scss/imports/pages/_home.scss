@@ -422,5 +422,17 @@
         margin-top: 120px;
       }
     }
+
+    &_swiper {
+      margin-top: 25px;
+      padding: 0 50px;
+    }
+  }
+
+  /* product */
+  .product {
+    &_container {
+      margin-top: 180px;
+    }
   }
 }
