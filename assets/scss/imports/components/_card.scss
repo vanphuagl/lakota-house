@@ -3,6 +3,8 @@
 .c-card {
   &_img {
     position: relative;
+    font-size: 1.5rem;
+    line-height: 1.64;
 
     p.label {
       position: absolute;
@@ -45,16 +47,31 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
+
+    @include maxW(1023px) {
+      margin-top: 10px;
+
+      p {
+        font-size: 1.4rem;
+        line-height: 1.64;
+      }
+    }
   }
 
   &_tag {
-    margin-top: 5px;
-    font-size: 1.5rem;
-    line-height: 1.63;
+    margin-top: 3px;
     opacity: 0.5;
+    width: fit-content;
+    font-size: 1.5rem;
+    line-height: 1.64;
 
     &:hover {
-        opacity: 0.5;
+      opacity: 0.5;
+    }
+
+    @include maxW(1023px) {
+      font-size: 1.4rem;
+      line-height: 1.64;
     }
   }
 }

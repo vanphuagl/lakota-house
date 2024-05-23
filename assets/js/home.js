@@ -106,7 +106,14 @@ $(document).on("click", ".collection_tabs li", function () {
 const swiperRecommend = new Swiper('.js-recommend-swiper', {
   observer: true,
   observeParents: true,
-  slidesPerView: 4,
   spaceBetween: 20,
-  grabCursor: true
+  grabCursor: true,
+  breakpoints: {
+    0: {
+      slidesPerView: 1.145,
+    },
+    1024: {
+      slidesPerView: 4,
+    }
+  }
 });

@@ -143,6 +143,10 @@
 
       @include maxW(1023px) {
         padding-top: 120px;
+
+        h2 {
+          padding: 0 22px;
+        }
       }
     }
 
@@ -424,8 +428,14 @@
     }
 
     &_swiper {
-      margin-top: 25px;
+      overflow: hidden;
       padding: 0 50px;
+      margin: 25px -50px 0;
+
+      @include maxW(1023px) {
+        padding: 0 22px;
+        margin: 20px -22px 0;
+      }
     }
   }
 
