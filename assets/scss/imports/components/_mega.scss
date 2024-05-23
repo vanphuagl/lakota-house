@@ -22,6 +22,10 @@
   &_container {
     background-color: #f7f5ef;
     padding: 150px 50px 70px;
+    max-height: calc(100vh - 60px - 60px);
+    overflow: auto;
+
+    @include customscroll();
   }
 
   &_inner {
@@ -64,19 +68,19 @@
       position: relative;
       background-color: #efece5;
       padding-bottom: 100%;
-    }
 
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      position: absolute;
-      max-width: 100%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      mix-blend-mode: multiply;
-      padding: 30px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: absolute;
+        max-width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        mix-blend-mode: multiply;
+        padding: 30px;
+      }
     }
 
     p {

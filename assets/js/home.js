@@ -46,3 +46,39 @@ $(document).ready(function () {
         $(".js-header-top").css("position", "absolute"));
   });
 });
+
+/* ------------------------------- mainvisual ------------------------------- */
+
+const swiperMainvisual = new Swiper(".js-mainvisual-swiper", {
+  effect: "fade",
+  speed: 1000,
+  autoplay: {
+    delay: 6000,
+  },
+  allowTouchMove: false,
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + "0" + (index + 1) + "</span>";
+    },
+  },
+  on: {
+    init: doSomethingWithActiveSlide,
+    slideChange: doSomethingWithActiveSlide,
+  },
+});
+
+function doSomethingWithActiveSlide() {
+  const mainvisualPagination = document.querySelector(
+    ".mainvisual_swiper .swiper-pagination"
+  );
+  const mainvisualTitle = document.querySelectorAll(
+    ".homepage .mainvisual_info"
+  );
+
+  mainvisualPagination.style.setProperty(
+    "bottom",
+    mainvisualTitle[this.activeIndex].offsetHeight + "px"
+  );
+}

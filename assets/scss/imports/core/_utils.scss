@@ -41,6 +41,7 @@
   display: inline-block;
   overflow: hidden;
   position: relative;
+  cursor: pointer;
 
   &:hover {
     &:after {
@@ -53,7 +54,7 @@
     width: 100%;
     height: 2px;
     position: absolute;
-    bottom: 0;
+    bottom: 2px;
     left: 0;
     backface-visibility: hidden;
     background-color: currentColor;

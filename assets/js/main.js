@@ -107,13 +107,68 @@ $(".js-cart-checkbox").change(function () {
   }
 });
 
+// handle quantity
+const minusBtn = document.querySelector(".js-cart-qty-descrease");
+const plusBtn = document.querySelector(".js-cart-qty-increase");
+const inputBox = document.querySelector(".js-cart-qty-number");
+
+if (
+  inputBox !== undefined &&
+  minusBtn !== undefined &&
+  plusBtn !== undefined &&
+  inputBox !== null &&
+  minusBtn !== null &&
+  plusBtn !== null
+) {
+  updateButtonStates();
+
+  plusBtn.addEventListener("click", increaseValue);
+  minusBtn.addEventListener("click", decreaseValue);
+  inputBox.addEventListener("input", handleQuantityChange);
+
+  function updateButtonStates() {
+    const value = parseInt(inputBox.value);
+    minusBtn.disabled = value <= 1;
+    plusBtn.disabled = value >= parseInt(inputBox.max);
+  }
+
+  function decreaseValue() {
+    let value = parseInt(inputBox.value);
+    value = isNaN(value) ? 1 : Math.max(value - 1, 1);
+    inputBox.value = value;
+    updateButtonStates();
+    handleQuantityChange();
+  }
+
+  function increaseValue() {
+    let value = parseInt(inputBox.value);
+    value = isNaN(value) ? 1 : Math.min(value + 1, parseInt(inputBox.max));
+    inputBox.value = value;
+    updateButtonStates();
+    handleQuantityChange();
+  }
+
+  function handleQuantityChange() {
+    let value = parseInt(inputBox.value);
+    value = isNaN(value) ? 1 : value;
+    // Execute your code here based on the updated quantity value
+    console.log("Quantity changed:", value);
+  }
+}
+
 /* ---------------------------------- mega ---------------------------------- */
 
-$(".c-header .js-show-mega").hover(function () {
-  $(".c-header").addClass("open-mega");
-}, function () {
-  $(".c-header").addClass("open-mega");
-});
+$(".c-header .js-show-mega").hover(
+  function () {
+    $(".c-header").addClass("open-mega");
+  },
+  function () {
+    $(".c-header").removeClass("open-mega");
+  }
+),
+  $(window).scroll(function () {
+    $(".c-header").removeClass("open-mega");
+  });
 
 $(document).on("click", ".tab-link", function () {
   let tabID = $(this).attr("data-tab");

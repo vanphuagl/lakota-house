@@ -8,8 +8,120 @@
     position: relative;
 
     &_container {
-      background-color: #91916c;
+      background-color: $black-cl;
       height: 100%;
+    }
+
+    &_swiper {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+
+      .swiper-pagination {
+        position: absolute;
+        padding: 0 50px;
+        bottom: 120px;
+        text-align: left;
+        display: flex;
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+
+      .swiper-pagination-bullet {
+        background: none;
+        color: $white-cl;
+        font-size: 1.6rem;
+        line-height: 1.66;
+        margin: 0;
+        width: auto;
+        height: auto;
+        opacity: 0.5;
+      }
+
+      .swiper-pagination-bullet-active {
+        opacity: 1;
+      }
+
+      @include maxW(1023px) {
+        .swiper-pagination {
+          padding: 0 22px;
+          gap: 12px;
+        }
+
+        .swiper-pagination-bullet {
+          font-size: 1.4rem;
+          line-height: 1.68;
+        }
+      }
+    }
+
+    &_items {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      &:before {
+        content: "";
+        background-color: $black-cl;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        opacity: 0.3;
+        pointer-events: none;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &_info {
+      width: 100%;
+      padding: 0 50px;
+      position: absolute;
+      bottom: 37px;
+      z-index: 1;
+      color: $white-cl;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+
+      a.title {
+        font-size: 3.6rem;
+        font-weight: 400;
+        font-family: "itc-benguiat", serif;
+        line-height: 1.72;
+        width: 85%;
+      }
+
+      a.viewmore {
+        font-size: 1.6rem;
+        line-height: 1.66;
+      }
+
+      @include maxW(1023px) {
+        padding: 0 22px;
+        bottom: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+
+        a.title {
+          font-size: 2.6rem;
+          line-height: 2rem;
+          width: 100%;
+        }
+
+        a.viewmore {
+          font-size: 1.4rem;
+          line-height: 1.68;
+        }
+      }
     }
   }
 
