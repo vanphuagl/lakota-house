@@ -4,7 +4,7 @@
 
 $(document).ready(function () {
   // scroll invert header
-  $(window).scroll(function () {
+  $(window).on("pageshow scroll", function () {
     let hSize = $(".js-offset-top").offset().top,
       scroll = $(window).scrollTop();
 
@@ -82,3 +82,21 @@ function doSomethingWithActiveSlide() {
     mainvisualTitle[this.activeIndex].offsetHeight + "px"
   );
 }
+
+/* ------------------------------- collection ------------------------------- */
+let numberIndex = 0;
+
+$(document).on("click", ".collection_tabs li", function () {
+  numberIndex = $(this).index();
+  if (!$(this).is("active")) {
+    $(".collection_tabs li").removeClass("active");
+    $(".collection_thumbs li").removeClass("active");
+    $(".collection_content").removeClass("active");
+
+    // tab
+    $(this).addClass("active");
+    // content
+    $(".collection_content:eq(" + numberIndex + ")").addClass("active");
+    $(".collection_thumbs li:eq(" + numberIndex + ")").addClass("active");
+  }
+});

@@ -101,7 +101,7 @@
   }
 
   &_title {
-    font-family: "itc-benguiat", serif;
+    font-family: $itc-fonts;
     font-weight: 400;
     font-size: 4.2rem;
     letter-spacing: -1.68px;
@@ -257,7 +257,7 @@
     }
 
     .term a {
-      font-family: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
+      font-family: $hira-fonts;
       font-size: 1.3rem;
       font-weight: 300;
       line-height: 1;

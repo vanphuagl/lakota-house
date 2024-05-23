@@ -82,6 +82,13 @@
   }
 }
 
+@keyframes fadeTab {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
 .flex-1 {
   flex: 1;
 }
@@ -93,15 +100,11 @@
 
 /* fonts */
 .fonts-hiragino {
-  font-family: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
+  font-family: $hira-fonts;
 }
 
 .fonts-itc {
-  font-family: "itc-benguiat", serif;
-}
-
-.fonts-itc-condensed {
-  font-family: "itc-benguiat-condensed", sans-serif;
+  font-family: $itc-fonts;
 }
 
 /* only device */

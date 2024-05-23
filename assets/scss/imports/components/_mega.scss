@@ -91,19 +91,14 @@
   }
 
   &_tabs {
-    display: none;
     opacity: 0;
-    animation: fadeIn 0.5s ease 1 forwards;
+    animation: 1s forwards fadeTab;
+    display: none;
+    visibility: hidden;
 
     &.active {
       display: block;
+      visibility: visible;
     }
-  }
-}
-
-@keyframes fadeIn {
-  100% {
-    opacity: 1;
-    transform: none;
   }
 }
