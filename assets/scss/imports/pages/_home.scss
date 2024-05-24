@@ -4,21 +4,23 @@
 
 .homepage {
   .mt-container {
-    margin-top: 200px;
+    margin: 200px 0;
 
     @include maxW(1023px) {
-      margin-top: 120px;
+      margin: 120px 0;
     }
   }
 
-  &_title {
+  &_head {
     font-size: 2rem;
     font-weight: 500;
     line-height: 1.63;
+    margin-bottom: 25px;
 
     @include maxW(1023px) {
       font-size: 1.8rem;
       line-height: 1.64;
+      margin-bottom: 20px;
     }
   }
 
@@ -400,11 +402,11 @@
     &_swiper {
       overflow: hidden;
       padding: 0 50px;
-      margin: 25px -50px 0;
+      margin: 0 -50px;
 
       @include maxW(1023px) {
         padding: 0 22px;
-        margin: 20px -22px 0;
+        margin: 0 -22px;
       }
     }
   }
@@ -412,13 +414,11 @@
   /* product */
   .product {
     &_list {
-      margin-top: 25px;
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 20px;
 
       @include maxW(1023px) {
-        margin-top: 20px;
         grid-template-columns: repeat(2, 1fr);
         gap: 10px;
       }
@@ -461,5 +461,184 @@
 
   /* journal */
   .journal {
+    &_inner {
+      display: grid;
+      grid-template-columns: 62.69% 1fr;
+      gap: 75px;
+
+      @include maxW(1023px) {
+        display: block;
+      }
+    }
+
+    &_left {
+      .c-img-pb {
+        --pad-bottom: calc(560 / 840 * 100%);
+      }
+
+      @include maxW(1023px) {
+        .c-img-pb {
+          --pad-bottom: calc(246 / 370 * 100%);
+        }
+      }
+    }
+
+    &_right {
+      padding-right: 30px;
+
+      @include maxW(1023px) {
+        padding-right: 0;
+      }
+    }
+
+    &_name {
+      margin-top: 35px;
+
+      h3 {
+        font-size: 3.6rem;
+        font-weight: 400;
+        line-height: 1;
+        letter-spacing: -1.44px;
+      }
+
+      @include maxW(1023px) {
+        margin-top: 20px;
+
+        h3 {
+          font-size: 2.6rem;
+          letter-spacing: -1.04px;
+        }
+      }
+    }
+
+    &_sub {
+      margin-top: 12px;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 1.5rem;
+      line-height: 1.63;
+
+      p {
+        color: $black-cl;
+        opacity: 0.5;
+      }
+
+      span {
+        width: 1px;
+        height: 13px;
+        background-color: rgba($color: #000000, $alpha: 0.15);
+      }
+
+      @include maxW(1023px) {
+        margin-top: 10px;
+        font-size: 1.3rem;
+        line-height: 1.62;
+      }
+    }
+
+    &_content {
+      margin-top: 50px;
+
+      p {
+        font-family: $hira-fonts;
+        font-size: 1.5rem;
+        font-weight: 300;
+        line-height: 1.5;
+        letter-spacing: -0.52px;
+        font-feature-settings: "palt" 1;
+      }
+
+      @include maxW(1023px) {
+        margin-top: 25px;
+
+        p {
+          font-size: 1.4rem;
+          line-height: 1.6;
+          letter-spacing: -0.56px;
+        }
+      }
+    }
+
+    &_link {
+      margin-top: 20px;
+
+      @include maxW(1023px) {
+        margin-top: 25px;
+      }
+    }
+  }
+
+  /* bnr */
+  .bnr {
+    &_inner {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+
+      @include maxW(1023px) {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 15px;
+      }
+    }
+
+    &_items {
+      position: relative;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $black-cl;
+        opacity: 0.2;
+        z-index: 1;
+      }
+
+      .c-img-pb {
+        --pad-bottom: calc(414 / 645 * 100%);
+      }
+    }
+
+    &_text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 0 45px;
+      z-index: 3;
+      color: $white-cl;
+
+      p {
+        font-size: 1.6rem;
+        line-height: 1.64;
+      }
+
+      h3 {
+        font-family: $itc-fonts;
+        font-size: 2.8rem;
+        font-weight: 400;
+        line-height: 1.4;
+        letter-spacing: -1.12px;
+      }
+
+      @include maxW(1023px) {
+        top: auto;
+        bottom: 12px;
+        padding: 0 20px;
+        transform: none;
+
+        p {
+          font-size: 1.4rem;
+          line-height: 1.63;
+        }
+
+        h3 {
+          font-size: 2.2rem;
+          letter-spacing: -0.88px;
+        }
+      }
+    }
   }
 }
