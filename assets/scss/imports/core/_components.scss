@@ -90,3 +90,83 @@
     }
   }
 }
+
+/* image padding-bottom */
+.c-img-pb {
+  display: block;
+  z-index: 1;
+  position: relative;
+  height: 100%;
+  padding-bottom: var(--pad-bottom);
+  background-color: #efece5;
+
+  &-product {
+    mix-blend-mode: multiply;
+    aspect-ratio: 1/1;
+    padding: 40px;
+
+    @include maxW(1023px) {
+      padding: 0 25px;
+    }
+  }
+
+  p.viewall {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    line-height: 1.64;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+/* ------------------------------- button link ------------------------------ */
+
+.c-btn-link {
+  font-size: 1.6rem;
+  line-height: 1.63;
+
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+
+  &:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    bottom: 2px;
+    left: 0;
+    backface-visibility: hidden;
+    background-color: currentColor;
+  }
+
+  &:hover {
+    &:after {
+      animation: lineLink 0.5s;
+    }
+  }
+
+  @include maxW(1023px) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 60px;
+    border: 1px solid $black-cl;
+    font-size: 1.4rem;
+
+    &:after {
+      content: unset;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 /* ---------------------------------- card ---------------------------------- */
 
 .c-card {
-  &_img {
+  &_group {
     position: relative;
     font-size: 1.5rem;
     line-height: 1.64;
@@ -12,34 +12,10 @@
       padding: 0 20px;
       z-index: 2;
     }
-
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-      mix-blend-mode: multiply;
-      aspect-ratio: 1/1;
-      padding: 40px;
-    }
   }
 
-  &_box {
-    display: block;
-    z-index: 1;
-    position: relative;
-    height: 100%;
-    padding-bottom: calc(427 / 320 * 100%);
-    background-color: #efece5;
-
-    p.viewall {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+  &_img {
+    --pad-bottom: calc(427 / 320 * 100%);
   }
 
   &_info {
