@@ -105,4 +105,18 @@
       padding-bottom: 20px;
     }
   }
+
+  &_newsletter {
+    width: 58.39%;
+
+    @include maxW(1023px) {
+      width: 100%;
+    }
+  }
+
+  &_input {
+    margin-top: 25px;
+    position: relative;
+    width: 100%;
+  }
 }
