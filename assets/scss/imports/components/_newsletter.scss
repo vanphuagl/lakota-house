@@ -4,12 +4,6 @@
   padding: 0;
   position: relative;
 }
-.formbox-editor_68M8J fieldset > input,
-.formbox-editor_68M8J fieldset > textarea,
-.formbox-editable-field_68M8J {
-  margin: 10px 0;
-  outline: none;
-}
 .spacer-block_68M8J {
   min-height: 20px;
   padding: 10px 0;
@@ -30,10 +24,6 @@
   width: 100%;
   box-sizing: border-box;
 }
-#formbox_screen_subscribe_68M8J,
-#formbox_screen_success_68M8J {
-  padding: 30px 0;
-}
 .formbox-title_8M8J,
 .formbox-text-field_68M8J {
   margin-bottom: 0;
@@ -47,10 +37,9 @@
 .formbox-title_68M8J p,
 .formbox-text-field_68M8J p {
   margin: 0;
-  margin-bottom: 10px;
   padding: 0;
   word-break: break-word;
-  line-height: 1.63;
+  line-height: 1;
 }
 label.formbox-field-label_68M8J {
   display: block;
@@ -61,6 +50,7 @@ label.formbox-field-label_68M8J {
   font-family: $hira-fonts;
   line-height: 1.6;
   letter-spacing: -0.26px;
+  margin-top: 25px;
 }
 label.formbox-label-wrap_68M8J {
   display: block;
