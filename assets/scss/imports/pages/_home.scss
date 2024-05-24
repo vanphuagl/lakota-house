@@ -40,7 +40,6 @@
 
       .swiper-pagination {
         position: absolute;
-        padding: 0 50px;
         bottom: 120px;
         text-align: left;
         display: flex;
@@ -65,7 +64,6 @@
 
       @include maxW(1023px) {
         .swiper-pagination {
-          padding: 0 22px;
           gap: 12px;
         }
 
@@ -103,7 +101,6 @@
 
     &_info {
       width: 100%;
-      padding: 0 50px;
       position: absolute;
       bottom: 37px;
       z-index: 1;
@@ -112,6 +109,7 @@
       align-items: center;
       justify-content: space-between;
       gap: 12px;
+      padding: 0 50px;
 
       a.title {
         font-size: 3.6rem;
@@ -127,10 +125,10 @@
       }
 
       @include maxW(1023px) {
-        padding: 0 22px;
         bottom: 25px;
         flex-direction: column;
         align-items: flex-start;
+        padding: 0 22px;
 
         a.title {
           font-size: 2.6rem;
@@ -401,11 +399,9 @@
   .recommend {
     &_swiper {
       overflow: hidden;
-      padding: 0 50px;
       margin: 0 -50px;
 
       @include maxW(1023px) {
-        padding: 0 22px;
         margin: 0 -22px;
       }
     }
@@ -461,7 +457,7 @@
 
   /* journal */
   .journal {
-    &_inner {
+    &_wrapper {
       display: grid;
       grid-template-columns: 62.69% 1fr;
       gap: 75px;
@@ -565,6 +561,180 @@
 
       @include maxW(1023px) {
         margin-top: 25px;
+      }
+    }
+  }
+
+  /* shop */
+  .shop {
+    &_swiper {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      height: 100vh;
+
+      @include maxW(1023px) {
+        height: calc(100vh - 60px - 30px - 5px);
+      }
+    }
+
+    &_items {
+      width: 100%;
+      height: 100%;
+
+      picture {
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: $black-cl;
+          opacity: 0.2;
+          z-index: 1;
+        }
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    &_progress {
+      z-index: 1;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 50px;
+      padding: 0 50px;
+      width: 100%;
+      height: 2px;
+
+      &_bar {
+        position: absolute;
+        opacity: 1;
+        width: calc(100% - 100px);
+        height: 100%;
+        background: rgba(255, 255, 255, 0.3);
+
+        &:after {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 0;
+          height: 100%;
+          background: $white-cl;
+          content: "";
+        }
+      }
+
+      &.animate .shop_progress_bar:after {
+        transition: width linear;
+        width: 100%;
+        transition-duration: 6s;
+      }
+
+      @include maxW(1023px) {
+        padding: 0 22px;
+        bottom: 22px;
+
+        &_bar {
+          width: calc(100% - 44px);
+        }
+      }
+    }
+
+    &_control {
+      position: absolute;
+      bottom: 90px;
+      right: 50px;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      .swiper-button-next,
+      .swiper-button-prev {
+        position: initial;
+        margin: 0;
+        width: 16px;
+        height: auto;
+
+        &:after {
+          font-size: 0;
+          border: 0;
+        }
+      }
+
+      @include maxW(1023px) {
+        bottom: 55px;
+        right: 22px;
+        gap: 15px;
+
+        .swiper-button-next,
+        .swiper-button-prev {
+          width: 13px;
+
+          svg {
+            width: 10px;
+          }
+        }
+      }
+    }
+
+    &_text {
+      position: absolute;
+      bottom: 80px;
+      padding: 0 50px;
+      width: 85%;
+      z-index: 2;
+      color: $white-cl;
+
+      p {
+        font-size: 2rem;
+        line-height: 1.63;
+        margin-bottom: 10px;
+      }
+
+      h3 {
+        font-family: $itc-fonts;
+        font-size: 3.6rem;
+        font-weight: 300;
+        line-height: 1;
+        letter-spacing: -1.44px;
+      }
+
+      @include maxW(1023px) {
+        padding: 0 22px;
+        bottom: 50px;
+
+        p {
+          font-size: 1.8rem;
+          margin-bottom: 8px;
+        }
+
+        h3 {
+          font-size: 2.6rem;
+          letter-spacing: -1.04px;
+        }
+      }
+    }
+
+    &_link {
+      font-size: 1.6rem;
+      line-height: 1.64;
+      color: $white-cl;
+      margin-top: 5px;
+
+      @include maxW(1023px) {
+        padding: 0 22px;
+        font-size: 1.4rem;
+        margin-top: 30px;
+        color: $black-cl;
       }
     }
   }

@@ -51,9 +51,10 @@ $(document).ready(function () {
 
 const swiperMainvisual = new Swiper(".js-mainvisual-swiper", {
   effect: "fade",
-  speed: 1000,
+  speed: 1200,
   autoplay: {
     delay: 6000,
+    disableOnInteraction: false,
   },
   allowTouchMove: false,
   pagination: {
@@ -114,6 +115,41 @@ const swiperRecommend = new Swiper('.js-recommend-swiper', {
     },
     1024: {
       slidesPerView: 4,
+    }
+  }
+});
+
+/* ---------------------------------- shop ---------------------------------- */
+const swiperShop = new Swiper('.js-shop-swiper', {
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  },
+  effect: "fade",
+  speed: 1200,
+  autoplay: {
+    delay: 6000,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  breakpoints: {
+    0: {
+      allowTouchMove: true
+    },
+    1024: {
+      allowTouchMove: false
+    }
+  },
+  on: {
+    init: function () {
+      $(".shop_progress").removeClass("animate");
+      $(".shop_progress").addClass("animate");
+    },
+    slideChangeTransitionStart: function () {
+      $(".shop_progress").removeClass("animate");
+    },
+    slideChangeTransitionEnd: function () {
+      $(".shop_progress").addClass("animate");
     }
   }
 });
