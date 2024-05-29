@@ -2,9 +2,11 @@
 
 .collectionspage {
   .mb-head {
+    padding-top: 15px;
     margin-bottom: 100px;
 
     @include maxW(1023px) {
+      padding-top: 12px;
       margin-bottom: 50px;
     }
   }
@@ -12,6 +14,10 @@
   .collection {
     &_inner {
       padding-top: 210px;
+
+      &.is-collection-brand {
+        padding-top: 180px;
+      }
 
       h2.heading {
         font-family: var(--itc-fonts);
@@ -31,6 +37,10 @@
 
       @include maxW(1023px) {
         padding-top: 135px;
+
+        &.is-collection-brand {
+          padding-top: 100px;
+        }
 
         h2.heading {
           font-size: 3.2rem;
@@ -74,9 +84,9 @@
       }
 
       &_content {
-        width: 95%;
+        width: 90%;
         position: absolute;
-        bottom: 50px;
+        bottom: 46px;
         z-index: 2;
         color: $white-cl;
 
@@ -90,14 +100,15 @@
         p.desc {
           margin-top: 23px;
           font-family: var(--hira-fonts);
+          font-feature-settings: "palt" 1;
           font-weight: 400;
           font-size: 1.5rem;
           letter-spacing: -0.3px;
-          line-height: 1.8;
+          line-height: 1.6;
         }
 
         .link {
-          margin-top: 37px;
+          margin-top: 30px;
 
           a {
             font-size: 1.6rem;
@@ -106,7 +117,7 @@
         }
 
         @include maxW(1023px) {
-          bottom: 25px;
+          bottom: 20px;
 
           h2.title {
             font-size: 3.2rem;
@@ -116,12 +127,11 @@
           p.desc {
             margin-top: 17px;
             font-size: 1.4rem;
-            line-height: 1.82;
             letter-spacing: -0.28px;
           }
 
           .link {
-            margin-top: 19px;
+            margin-top: 17px;
 
             a {
               font-size: 1.4rem;
@@ -133,7 +143,7 @@
 
       &_scrolldown {
         position: absolute;
-        right: 50px;
+        right: 49px;
         bottom: 48px;
         z-index: 2;
 
@@ -160,7 +170,7 @@
         }
 
         @include maxW(1023px) {
-          right: 22px;
+          right: 21px;
           bottom: 25px;
 
           .line {
@@ -193,6 +203,7 @@
         display: flex;
         align-items: center;
         gap: 15px;
+        margin-top: 10px;
 
         @include maxW(1023px) {
           gap: 10px;
@@ -213,7 +224,7 @@
         }
 
         &.is-active {
-          padding: 5px;
+          padding: 4px;
           background-color: $black-cl;
           color: $white-cl;
 
@@ -250,6 +261,7 @@
         }
 
         @include maxW(1023px) {
+          margin-bottom: 7px;
           a {
             font-size: 1.4rem;
           }
@@ -296,15 +308,15 @@
       }
 
       &_inner {
-        width: 77.77%;
+        width: 83%;
         height: max-content;
         background-color: #f7f5ef;
         border-radius: 2px;
-        padding: 38px 50px;
+        padding: 42px 50px;
 
         @include maxW(1023px) {
           width: 100%;
-          padding: 25px 22px 50px;
+          padding: 28px 22px 50px;
         }
       }
 
@@ -314,7 +326,7 @@
         justify-content: space-between;
         pointer-events: none;
 
-        padding-top: 15px;
+        padding-top: 23px;
         border-top: 1px solid $black-cl;
 
         p {
@@ -334,7 +346,8 @@
         }
 
         @include maxW(1023px) {
-          padding-top: 25px;
+          padding-top: 17px;
+          padding-right: 12px;
           pointer-events: auto;
 
           p {
@@ -352,6 +365,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+        padding-right: 24px;
 
         h2 {
           font-size: 2rem;
@@ -359,6 +373,7 @@
         }
 
         @include maxW(1023px) {
+          padding-right: 5px;
           h2 {
             font-size: 1.6rem;
           }
@@ -369,12 +384,13 @@
         margin-top: 40px;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 38px 28px;
+        gap: 42px 28px;
 
         @include maxW(1023px) {
+          margin-top: 47px;
           display: grid;
           grid-template-columns: repeat(1, 1fr);
-          gap: 25px;
+          gap: 20px;
         }
       }
 
@@ -389,7 +405,7 @@
           margin-top: 22px;
           display: grid;
           grid-template-columns: repeat(1, 1fr);
-          gap: 10px;
+          gap: 8px;
         }
 
         @include maxW(1023px) {
@@ -398,6 +414,9 @@
           transition: all 0.5s ease-in-out;
 
           ul {
+            margin-top: 17px;
+            gap: 0;
+
             &.default {
               grid-template-columns: repeat(2, 1fr);
             }
@@ -412,7 +431,7 @@
       }
 
       &_bottom {
-        margin-top: 60px;
+        margin-top: 68px;
         display: flex;
         gap: 20px;
         justify-content: flex-end;
@@ -438,7 +457,7 @@
           gap: 15px;
           margin-top: 50px;
 
-          a {
+          a,button {
             width: 100%;
             font-size: 1.4rem;
           }
