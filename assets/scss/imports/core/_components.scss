@@ -216,18 +216,18 @@
 /* ------------------------------ control page ------------------------------ */
 
 .c-control {
-  margin-top: 100px;
+  margin-top: 105px;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 60px;
+  gap: 62px;
 
   font-size: 1.6rem;
 
   &_pagination {
     display: flex;
-    gap: 18px;
+    gap: 20px;
 
     a {
       position: relative;
@@ -253,11 +253,19 @@
   }
 
   @include maxW(1023px) {
-    margin-top: 60px;
+    margin-top: 55px;
     justify-content: space-between;
-    gap: 10px;
+    gap: 12px;
 
     font-size: 1.4rem;
     line-height: 1.68;
+
+    &_pagination {
+      gap: 12px;
+
+      a:after {
+        bottom: 0;
+      }
+    }
   }
 }

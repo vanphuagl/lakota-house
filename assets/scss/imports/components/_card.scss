@@ -43,11 +43,12 @@
     gap: 10px;
 
     @include maxW(1023px) {
-      margin-top: 14px;
+      margin-top: 7px;
+      display: block;
 
       p {
         font-size: 1.4rem;
-        line-height: 1.64;
+        line-height: 1.4;
       }
     }
   }

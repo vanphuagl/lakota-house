@@ -416,6 +416,11 @@
 
       @include maxW(1023px) {
         margin: 0 -22px;
+
+        .c-card_info {
+          margin-top: 14px;
+          display: flex;
+        }
       }
     }
   }

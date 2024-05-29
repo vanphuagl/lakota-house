@@ -19,7 +19,7 @@
         font-weight: 400;
         line-height: 1.67;
         letter-spacing: -2px;
-        margin-bottom: 100px;
+        margin-bottom: 85px;
       }
 
       h3.title {
@@ -30,12 +30,12 @@
       }
 
       @include maxW(1023px) {
-        padding-top: 130px;
+        padding-top: 135px;
 
         h2.heading {
           font-size: 3.2rem;
           letter-spacing: -1.28px;
-          margin-bottom: 50px;
+          margin-bottom: 55px;
         }
 
         h3.title {
@@ -50,12 +50,12 @@
       margin-top: 30px;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 30px;
+      gap: 55px 20px;
 
       @include maxW(1023px) {
         margin-top: 25px;
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: 22px 10px;
       }
     }
 
