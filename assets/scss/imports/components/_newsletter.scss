@@ -174,3 +174,19 @@ input.formbox-field_68M8J.text-placeholder {
   animation-iteration-count: infinite;
   animation-timing-function: linear;
 }
+
+@include maxW(1023px) {
+  .formbox-title_68M8J p {
+    margin-top: 2px;
+  }
+  label.formbox-field-label_68M8J {
+    margin-top: 20px;
+  }
+  .formbox-button_68M8J {
+    right: 11px;
+    margin-top: -3px;
+  }
+  .input.formbox-field_68M8J {
+    padding: 14px 35px 15px 0;
+  }
+}

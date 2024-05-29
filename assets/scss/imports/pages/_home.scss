@@ -28,7 +28,7 @@
     @include maxW(1023px) {
       font-size: 1.8rem;
       line-height: 1.64;
-      margin-bottom: 20px;
+      margin-bottom: 16px;
     }
   }
 
@@ -135,7 +135,8 @@
       }
 
       @include maxW(1023px) {
-        bottom: 25px;
+        bottom: 22px;
+        gap: 15px;
         flex-direction: column;
         align-items: flex-start;
         padding: 0 22px;
@@ -143,6 +144,7 @@
         a.title {
           font-size: 2.6rem;
           line-height: 2rem;
+          letter-spacing: -1.2px;
           width: 100%;
         }
 
@@ -160,7 +162,7 @@
       padding-top: 198px;
 
       @include maxW(1023px) {
-        padding-top: 120px;
+        padding-top: 118px;
 
         h2 {
           padding: 0 22px;
@@ -196,12 +198,12 @@
       }
 
       @include maxW(1023px) {
-        margin-top: 20px;
+        margin-top: 16px;
         width: 100%;
 
         li {
           opacity: 1;
-          margin-bottom: 75px;
+          margin-bottom: 80px;
           width: 100%;
 
           &:last-child {
@@ -245,7 +247,7 @@
           letter-spacing: -1.52px;
           position: absolute;
           z-index: 2;
-          top: 10px;
+          top: 14px;
           right: 0;
           padding: 0 22px;
         }
@@ -383,8 +385,8 @@
         p {
           font-size: 1.4rem;
           line-height: 1.55;
-          letter-spacing: -0.28px;
-          margin-bottom: 40px;
+          letter-spacing: -1.5px;
+          margin-bottom: 46px;
         }
       }
     }
@@ -427,7 +429,7 @@
 
       @include maxW(1023px) {
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: 20px 10px;
       }
     }
 
@@ -454,7 +456,7 @@
       line-height: 1.63;
 
       @include maxW(1023px) {
-        bottom: 12px;
+        bottom: 8px;
         font-size: 1.4rem;
       }
     }
@@ -633,7 +635,7 @@
 
       @include maxW(1023px) {
         padding: 0 22px;
-        bottom: 22px;
+        bottom: 24px;
 
         &_bar {
           width: calc(100% - 44px);
@@ -665,15 +667,15 @@
 
       @include maxW(1023px) {
         bottom: 55px;
-        right: 22px;
-        gap: 15px;
+        right: 30px;
+        gap: 2px;
 
         .swiper-button-next,
         .swiper-button-prev {
-          width: 13px;
+          width: 20px;
 
           svg {
-            width: 10px;
+            width: 8px;
           }
         }
       }
@@ -800,6 +802,7 @@
         h3 {
           font-size: 2.2rem;
           letter-spacing: -0.88px;
+          line-height: 1.2;
         }
       }
     }

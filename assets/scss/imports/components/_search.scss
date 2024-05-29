@@ -24,10 +24,10 @@
     width: auto;
     overflow: auto;
     max-height: calc(100vh - 200px);
-    padding: 60px 60px 70px;
+    padding: 57px 60px 65px;
 
     @include maxW(1023px) {
-      padding: 25px 22px 30px;
+      padding: 24px 22px 28px;
     }
   }
 
@@ -54,18 +54,18 @@
   &_bar {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #dbdbdb;
+    border-bottom: 1px solid $black-cl;
   }
 
   &_form {
     position: relative;
-    padding: 30px 25px 30px 0;
+    padding: 24px 24px 20px 0;
     display: flex;
     align-items: center;
     flex: 1 0 auto;
 
     @include maxW(1023px) {
-      padding: 5px 20px 10px 0;
+      padding: 3px 20px 14px 0;
     }
   }
 
@@ -114,16 +114,12 @@
   }
 
   &_close {
-    position: static;
-    top: auto;
-    right: auto;
-    margin-top: -3px;
-    margin-right: 20px;
+    margin-right: 14px;
     padding: 5px;
     cursor: pointer;
 
     @include maxW(1023px) {
-      margin-top: -4px;
+      margin-top: -10px;
       margin-right: 10px;
 
       svg.icon-close {

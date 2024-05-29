@@ -18,12 +18,13 @@
 
     @include maxW(1023px) {
       display: block;
+      margin-bottom: 106px;
     }
   }
 
   &_left {
     @include maxW(1023px) {
-      margin-bottom: 120px;
+      margin-bottom: 127px;
     }
   }
 
@@ -84,7 +85,7 @@
           font-size: 1.4rem;
           line-height: 1.5;
           height: auto;
-          margin-bottom: 2px;
+          margin-bottom: 4px;
         }
       }
 
@@ -95,7 +96,7 @@
           font-size: 1.2rem;
           line-height: 1.5;
           height: auto;
-          margin-bottom: 3px;
+          margin-bottom: 7.6px;
         }
       }
     }
@@ -105,7 +106,7 @@
     padding-bottom: 40px;
 
     @include maxW(1023px) {
-      padding-bottom: 20px;
+      padding-bottom: 15px;
     }
   }
 
@@ -121,5 +122,9 @@
     margin-top: 25px;
     position: relative;
     width: 100%;
+
+    @include maxW(1023px) {
+      margin-top: 10px;
+    }
   }
 }

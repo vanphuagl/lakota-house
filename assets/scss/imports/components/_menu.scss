@@ -38,7 +38,7 @@
   }
 
   &_inner {
-    padding: 43px 50px 40px 60px;
+    padding: 27px 50px 40px 60px;
     overflow: auto;
     height: 100%;
     position: relative;
@@ -47,7 +47,7 @@
     flex-direction: column;
 
     @include maxW(1023px) {
-      padding: 37px 22px 20px;
+      padding: 22px 22px 15px;
     }
   }
 
@@ -93,10 +93,10 @@
   }
 
   &_drawer {
-    margin-top: 85px;
+    margin-top: 58px;
 
     @include maxW(1023px) {
-      margin-top: 60px;
+      margin-top: 65px;
     }
   }
 
@@ -116,7 +116,6 @@
 
     @include maxW(1023px) {
       font-size: 3.2rem;
-      line-height: 1.67;
       letter-spacing: -1.28px;
     }
   }
@@ -127,12 +126,12 @@
       align-items: center;
       position: relative;
       width: fit-content;
-      gap: 35px;
+      gap: 27px;
       cursor: pointer;
       transition: opacity 0.3s ease-in-out;
 
       &:hover {
-        opacity: 0.8s;
+        opacity: 0.8;
       }
 
       &.open {
@@ -176,7 +175,7 @@
       }
 
       @include maxW(1023px) {
-        gap: 25px;
+        gap: 22px;
 
         .plus {
           width: 15px;
@@ -199,20 +198,20 @@
     transition: all 0.5s ease-in-out;
 
     &_list {
-      margin: 30px 0;
+      margin: 22px 0 34px;
 
       @include maxW(1023px) {
-        margin: 25px 0;
+        margin: 30px 0 35px;
       }
     }
 
     &_items {
-      margin-bottom: 25px;
+      margin-bottom: 16px;
 
       .child {
-        margin-top: 14px;
+        margin-top: 8px;
         font-size: 1.6rem;
-        line-height: 1.8;
+        line-height: 1.6;
         font-weight: 500;
         opacity: 0.5;
         width: fit-content;
@@ -226,10 +225,10 @@
       }
 
       @include maxW(1023px) {
-        margin-bottom: 25px;
+        margin-bottom: 22px;
 
         .child {
-          margin-top: 15px;
+          margin-top: 11px;
           font-size: 1.4rem;
           line-height: 1.6;
         }
@@ -246,7 +245,6 @@
     margin-top: 70px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    column-gap: 10px;
 
     .social a {
       font-size: 1.6rem;
@@ -264,26 +262,28 @@
       letter-spacing: -0.26px;
       height: 21px;
       margin-bottom: 11px;
+      margin-left: -6px;
     }
 
     @include maxW(1023px) {
-      margin-top: 80px;
+      margin-top: 75px;
       display: block;
 
       .social a {
         font-size: 1.4rem;
         line-height: 1.5;
         height: auto;
-        margin-bottom: 10px;
+        margin-bottom: 4px;
       }
 
       .policy {
-        margin-top: 20px;
+        margin-top: 18px;
         a {
           font-size: 1.2rem;
           line-height: 1.5;
           height: auto;
-          margin-bottom: 10px;
+          margin-bottom: 4px;
+          margin-left: 1px;
         }
       }
     }

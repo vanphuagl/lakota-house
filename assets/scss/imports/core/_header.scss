@@ -104,18 +104,18 @@
   }
 
   @include maxW(1023px) {
-    height: 80px;
+    height: 70px;
   }
 
   &_container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
-    padding: 30px 50px 0;
+    padding: 0 50px;
     height: 100%;
 
     @include maxW(1023px) {
-      padding: 18px 22px 0;
+      padding: 0 22px;
     }
   }
 
@@ -171,12 +171,17 @@
 
     &.logo-white {
       opacity: 0;
+      padding-top: 30px;
     }
 
     @include maxW(1023px) {
-      &.logo-white svg {
-        width: auto;
-        height: 60px;
+      &.logo-white {
+        padding-top: 25px;
+
+        svg {
+          width: auto;
+          height: 60px;
+        }
       }
 
       &.logo-black svg {
