@@ -1,52 +1,5 @@
 "use strict";
 
-/* ------------------------------ header scroll ----------------------------- */
-
-$(document).ready(function () {
-  // scroll invert header
-  $(window).on("pageshow scroll", function () {
-    let hSize = $(".js-offset-top").offset().top,
-      scroll = $(window).scrollTop();
-
-    scroll >= hSize
-      ? $(".js-header-top").removeClass("c-header--white")
-      : $(".js-header-top").addClass("c-header--white");
-  });
-
-  // setHeight
-  function setHeight() {
-    let footdivheight = $(".js-c-attention").height(),
-      hSize = $(window).height(),
-      heightVisual = hSize - footdivheight;
-
-    $(".js-header-top").css("top", footdivheight);
-    $(".mainvisual").css("height", heightVisual);
-  }
-  setHeight();
-  $(window).resize(function () {
-    setHeight();
-  });
-
-  // handle close attention
-  $(".js-close-attention").click(function () {
-    $(this).parent().hide(), setHeight();
-  });
-
-  // scroll position
-  $(".js-header-top").css("position", "absolute");
-  $(window).scroll(function () {
-    let footdivheight = $(".c-attention").height(),
-      hMain = $(".mainvisual").offset().top,
-      scroll = $(window).scrollTop();
-
-    scroll >= hMain
-      ? ($(".js-header-top").css("top", 0),
-        $(".js-header-top").css("position", "fixed"))
-      : ($(".js-header-top").css("top", footdivheight),
-        $(".js-header-top").css("position", "absolute"));
-  });
-});
-
 /* ------------------------------- mainvisual ------------------------------- */
 
 const swiperMainvisual = new Swiper(".js-mainvisual-swiper", {
@@ -102,28 +55,26 @@ $(document).on("click", ".collection_tabs li", function () {
   }
 });
 
-/* ------------------------------- recommended ------------------------------ */
-
-const swiperRecommend = new Swiper('.js-recommend-swiper', {
-  observer: true,
-  observeParents: true,
-  spaceBetween: 20,
-  grabCursor: true,
-  breakpoints: {
-    0: {
-      slidesPerView: 1.145,
-    },
-    1024: {
-      slidesPerView: 4,
-    }
-  }
+// ===== resize =====
+const resizeTabCollection = () => {
+  const collection_tabs = document.querySelector(".collection_tabs");
+  const collection_content = document.querySelectorAll(".collection_content");
+  collection_content.forEach((query) => {
+    query.style.setProperty("top", collection_tabs.offsetHeight + 47 + "px");
+  });
+};
+["resize", "load"].forEach((evt) => {
+  window.addEventListener(evt, () => {
+    resizeTabCollection();
+  });
 });
+resizeTabCollection();
 
 /* ---------------------------------- shop ---------------------------------- */
-const swiperShop = new Swiper('.js-shop-swiper', {
+const swiperShop = new Swiper(".js-shop-swiper", {
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   effect: "fade",
   speed: 1200,
@@ -134,11 +85,11 @@ const swiperShop = new Swiper('.js-shop-swiper', {
   loop: true,
   breakpoints: {
     0: {
-      allowTouchMove: true
+      allowTouchMove: true,
     },
     1024: {
-      allowTouchMove: false
-    }
+      allowTouchMove: false,
+    },
   },
   on: {
     init: function () {
@@ -150,6 +101,6 @@ const swiperShop = new Swiper('.js-shop-swiper', {
     },
     slideChangeTransitionEnd: function () {
       $(".shop_progress").addClass("animate");
-    }
-  }
+    },
+  },
 });

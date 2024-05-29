@@ -3,8 +3,6 @@
 
 $main-fonts: "neue-haas-grotesk-text", "Hiragino Kaku Gothic Pro",
   "itc-benguiat", sans-serif;
-$hira-fonts: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
-$itc-fonts: "itc-benguiat", serif;
 
 //color common
 $main-bg-cl: #f7f5f0;
@@ -15,4 +13,7 @@ $gray-cl: #d3d3d3;
 
 :root {
   --app-height: 100vh;
+
+  --hira-fonts: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
+  --itc-fonts: "itc-benguiat", serif;
 }

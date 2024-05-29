@@ -16,6 +16,24 @@
 
   &_img {
     --pad-bottom: calc(427 / 320 * 100%);
+
+    img {
+      transition: opacity 0.3s ease-in;
+    }
+
+    &:hover {
+      .img-front {
+        opacity: 0;
+      }
+
+      .img-back {
+        opacity: 1;
+      }
+    }
+
+    .img-back {
+      opacity: 0;
+    }
   }
 
   &_info {

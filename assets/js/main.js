@@ -98,15 +98,6 @@ $(".js-btn-cart").on("click", function () {
   }
 });
 
-$(".js-cart-checkbox").change(function () {
-  let isCheck = this.checked;
-  if (isCheck) {
-    $(this).addClass("active");
-  } else {
-    $(this).removeClass("active");
-  }
-});
-
 // handle quantity
 const minusBtn = document.querySelector(".js-cart-qty-descrease");
 const plusBtn = document.querySelector(".js-cart-qty-increase");
@@ -208,3 +199,62 @@ $(document).on(
     return false;
   }
 );
+
+/* ------------------------------- recommended ------------------------------ */
+
+const swiperRecommend = new Swiper(".js-recommend-swiper", {
+  observer: true,
+  observeParents: true,
+  spaceBetween: 20,
+  grabCursor: true,
+  breakpoints: {
+    0: {
+      slidesPerView: 1.145,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+
+/* ---------------------------------- blogs --------------------------------- */
+const categoryBtn = document.querySelector(".js-blogs-selector");
+const categoryPanel = document.querySelector(".blog_group");
+
+if (categoryBtn) {
+  categoryBtn.addEventListener("click", function () {
+    this.classList.toggle("active");
+    if (categoryPanel.style.maxHeight) {
+      categoryPanel.style.maxHeight = null;
+    } else {
+      categoryPanel.style.maxHeight = categoryPanel.scrollHeight + "px";
+    }
+  });
+}
+
+/* --------------------------------- contact -------------------------------- */
+
+if ($("#js-checkbox")) {
+  // handle checkbox
+  $("#js-checkbox").change(function () {
+    let isCheck = this.checked;
+    if (isCheck) {
+      $(this).addClass("active");
+      $(this)
+        .closest("#js-contact-form")
+        .find(".js-contact-confirm")
+        .addClass("active");
+    } else {
+      $(this).removeClass("active");
+      $(this)
+        .closest("#js-contact-form")
+        .find(".js-contact-confirm")
+        .removeClass("active");
+    }
+  });
+
+  // handle clear
+  $(".js-contact-clear").click(function () {
+    $("#js-contact-form").find("input, textarea").val("");
+  });
+}

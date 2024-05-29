@@ -1,37 +1,53 @@
 /* ---------------------------------- mega ---------------------------------- */
 
 .c-mega {
-  position: absolute;
   width: 100%;
   height: auto;
-  left: 0;
-  top: 0;
-  pointer-events: none;
-  visibility: hidden;
-  opacity: 0;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
-  max-height: calc(100vh - 60px - 60px);
   overflow: hidden;
 
-  @include maxW(1023px) {
-    display: none;
+  &.is-header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    max-height: calc(100vh - 60px - 60px);
+
+    .c-mega_container {
+      padding: 150px 50px 70px;
+      max-height: calc(100vh - 60px - 60px);
+    }
+
+    @include maxW(1023px) {
+      display: none;
+    }
   }
 
   &_container {
     background-color: #f7f5ef;
-    padding: 150px 50px 70px;
-    max-height: calc(100vh - 60px - 60px);
+    padding: 80px 50px;
+    max-height: 100%;
     overflow: auto;
 
     @include customscroll();
+
+    @include maxW(1023px) {
+      padding: 60px 22px 45px;
+      max-height: 100%;
+      border-bottom: 1px solid #ccc;
+    }
   }
 
   &_inner {
     display: grid;
     grid-template-columns: 16.4% 1fr;
     gap: 10px;
+
+    @include maxW(1023px) {
+      display: block;
+    }
   }
 
   &_left {
@@ -46,17 +62,63 @@
       }
     }
 
+    span.indicator {
+      display: none;
+      position: absolute;
+      bottom: 0;
+      min-width: 0;
+      width: 50%;
+      height: 1px;
+      background-color: #000;
+      transition: left 0.3s, width 0.3s;
+    }
+
     a {
       font-size: 1.5rem;
       line-height: 1.65;
       margin-top: 35px;
     }
+
+    @include maxW(1023px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      width: 100%;
+      position: relative;
+
+      p {
+        font-size: 1.4rem;
+        line-height: 1.68;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 10px;
+        opacity: 1;
+      }
+
+      span.indicator {
+        display: inline-block;
+      }
+    }
+  }
+
+  &_right {
+    @include maxW(1023px) {
+      margin-top: 45px;
+    }
+  }
+
+  &_viewall {
+    margin-top: 45px;
   }
 
   &_list {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
+
+    @include maxW(1023px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px 10px;
+    }
   }
 
   &_items {
@@ -88,6 +150,14 @@
       font-size: 1.5rem;
       line-height: 1.63;
       margin-top: 15px;
+    }
+
+    @include maxW(1023px) {
+      p {
+        font-size: 1.4rem;
+        line-height: 1.68;
+        margin-top: 10px;
+      }
     }
   }
 

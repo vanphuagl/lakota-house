@@ -152,6 +152,7 @@
     &_info {
       display: flex;
       flex-direction: column;
+      justify-content: space-between;
 
       .group {
         flex: 1 1 auto;
@@ -284,6 +285,7 @@
     h3,
     p {
       font-size: 1.6rem;
+      font-weight: 500;
       display: inline-block;
     }
 
@@ -316,6 +318,7 @@
       color: $black-cl;
       border: 0;
       font-size: 1.6rem;
+      font-weight: 500;
     }
 
     @include maxW(1023px) {
@@ -349,10 +352,8 @@
         -webkit-appearance: none;
         position: absolute;
 
-        &.active {
-          &:before {
-            opacity: 1;
-          }
+        &:checked::before {
+          opacity: 1;
         }
 
         &:before {
@@ -379,11 +380,11 @@
 
     &_notes {
       padding-left: 35px;
-      font-weight: 300;
+      font-weight: 400;
 
       h3 {
         font-size: 1.5rem;
-        font-weight: 300;
+        font-weight: 400;
         letter-spacing: -0.6px;
         line-height: 1.66;
         margin-bottom: 12px;
@@ -418,7 +419,7 @@
     h3 {
       font-size: 1.5rem;
       line-height: 1.66;
-      font-weight: 300;
+      font-weight: 400;
       margin-bottom: 15px;
     }
 
@@ -455,7 +456,7 @@
     h3 {
       font-size: 1.5rem;
       line-height: 1.66;
-      font-weight: 300;
+      font-weight: 400;
     }
 
     @include maxW(1023px) {

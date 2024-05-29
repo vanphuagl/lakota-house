@@ -26,9 +26,11 @@
       opacity: 0.65;
     }
     .c-mega {
-      opacity: 1;
-      visibility: visible;
-      pointer-events: auto;
+      &.is-header {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+      }
     }
     .c-header_left li {
       color: $black-cl !important;

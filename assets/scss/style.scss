@@ -19,9 +19,15 @@
 @import "imports/components/search";
 @import "imports/components/cart";
 @import "imports/components/card";
+@import "imports/components/navi";
+@import "imports/components/form";
 
 /* pages */
 @import "imports/pages/home";
+@import "imports/pages/blogs";
+@import "imports/pages/collections";
+@import "imports/pages/account";
+@import "imports/pages/contact";
 
 /* utils */
 @import "imports/core/utils";
