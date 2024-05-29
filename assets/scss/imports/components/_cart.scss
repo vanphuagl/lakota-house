@@ -216,6 +216,10 @@
               font-size: 1.3rem;
               line-height: 1.62;
             }
+
+            th {
+              width: 45%;
+            }
           }
         }
 
@@ -275,6 +279,12 @@
         span:nth-child(2) {
           width: 10px;
           height: 2px;
+        }
+      }
+
+      @include maxW(1023px) {
+        .control {
+          padding-right: 10px;
         }
       }
     }
