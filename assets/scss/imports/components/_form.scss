@@ -1,5 +1,5 @@
 .c-form {
-  margin-top: 60px;
+  margin-top: 65px;
 
   @include maxW(1023px) {
     margin-top: 40px;
@@ -7,9 +7,9 @@
 
   &_control {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 28.5% 1fr 1fr;
     align-items: center;
-    padding: 21px 0;
+    padding: 21.5px 0;
     position: relative;
     border-bottom: 1px solid #ccc;
     font-family: var(--hira-fonts);
@@ -104,7 +104,7 @@
       }
 
       textarea {
-        height: 100px;
+        height: 192px;
       }
     }
 
@@ -125,23 +125,28 @@
       display: block;
       border-bottom: 1px solid $black-cl;
       font-size: 1.3rem;
-      padding: 12px 0;
+      padding: 11px 0;
 
       &:first-child {
         border-top: 1px solid $black-cl;
       }
 
       &_input {
-        min-height: 30px;
+        min-height: 20px;
 
-        input {
-          height: 30px;
+        input,
+        select {
+          height: 20px;
         }
 
         &:before,
         &:after {
           content: none !important;
         }
+      }
+
+      &_name {
+        padding-bottom: 12px;
       }
 
       &_btn {
