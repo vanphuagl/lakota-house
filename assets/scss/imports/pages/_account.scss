@@ -55,6 +55,10 @@
       }
     }
 
+    &_form {
+      margin-top: 52px;
+    }
+
     @include maxW(1023px) {
       &_container {
         width: 100%;
@@ -74,6 +78,10 @@
             letter-spacing: -0.52px;
           }
         }
+      }
+
+      &_form {
+        margin-top: 38px;
       }
     }
   }
@@ -319,10 +327,10 @@
   /* order */
   .order {
     &_inner {
-      margin-top: 80px;
+      margin-top: 75px;
 
       @include maxW(1023px) {
-        margin-top: 60px;
+        margin-top: 55px;
       }
     }
 
@@ -332,13 +340,13 @@
       border-bottom: 1px solid $black-cl;
 
       @include maxW(1023px) {
-        margin-top: 45px;
-        padding-bottom: 45px;
+        margin-top: 40px;
+        padding-bottom: 50px;
       }
     }
 
     &_items {
-      margin-bottom: 40px;
+      margin-bottom: 45px;
 
       &:last-child {
         margin-bottom: initial;
@@ -393,17 +401,24 @@
         grid-template-columns: 70% 1fr;
         gap: 30px;
 
+        .product-meta table {
+          width: 50%;
+        }
 
         @include maxW(1023px) {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           gap: 10px;
+
+          .product-meta table {
+            width: 100%;
+          }
         }
       }
 
       @include maxW(1023px) {
-        margin-bottom: 25px;
+        margin-bottom: 32px;
 
         &_price {
           margin-left: 0;
@@ -421,7 +436,7 @@
 
         .title {
           font-size: 1.5rem;
-          line-height: 1.7;
+          line-height: 1.78;
           letter-spacing: -0.6px;
           font-weight: 400;
         }
@@ -438,6 +453,7 @@
           .title {
             font-size: 1.3rem;
             letter-spacing: -0.26px;
+            line-height: 2;
           }
         }
 
@@ -448,6 +464,9 @@
     }
 
     &_address {
+      margin-top: 50px;
+      padding-bottom: 50px;
+
       &_content {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
@@ -458,10 +477,14 @@
           font-weight: 500;
           line-height: 1.66;
         }
+
+        @include maxW(1023px) {
+          gap: 20px;
+        }
       }
 
       &_info {
-        margin-top: 27px;
+        margin-top: 22px;
 
         p {
           font-family: var(--hira-fonts);
@@ -469,17 +492,20 @@
           line-height: 1.7;
           letter-spacing: -0.6px;
           font-weight: 400;
-          margin-bottom: 10px;
+          margin-bottom: 5px;
         }
       }
 
       @include maxW(1023px) {
+        margin-top: 40px;
+        padding-bottom: 30px;
+
         h3 {
           font-size: 1.4rem;
         }
 
         &_info {
-          margin-top: 24px;
+          margin-top: 32px;
 
           p {
             font-size: 1.3rem;
