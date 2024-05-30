@@ -200,19 +200,20 @@ $(document).on(
   }
 );
 
-/* ------------------------------- recommended ------------------------------ */
+/* ------------------------------- products ------------------------------ */
 
-const swiperRecommend = new Swiper(".js-recommend-swiper", {
+const swiperProducts = new Swiper(".js-products-swiper", {
   observer: true,
   observeParents: true,
-  spaceBetween: 20,
   grabCursor: true,
   breakpoints: {
     0: {
-      slidesPerView: 1.145,
+      slidesPerView: 2,
+      spaceBetween: 10,
     },
     1024: {
       slidesPerView: 4,
+      spaceBetween: 20,
     },
   },
 });

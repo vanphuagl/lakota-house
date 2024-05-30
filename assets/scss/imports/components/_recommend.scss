@@ -1,0 +1,32 @@
+/* recommend */
+.c-prodsw {
+  &_container {
+    margin-top: 150px;
+
+    @include maxW(1023px) {
+      margin-top: 80px;
+    }
+  }
+
+  &_head {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.63;
+    margin-bottom: 20px;
+
+    @include maxW(1023px) {
+      font-size: 1.8rem;
+      line-height: 1.64;
+      margin-bottom: 16px;
+    }
+  }
+
+  &_swiper {
+    overflow: hidden;
+    margin: 0 -50px;
+
+    @include maxW(1023px) {
+      margin: 0 -22px;
+    }
+  }
+}

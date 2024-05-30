@@ -70,6 +70,23 @@ const resizeTabCollection = () => {
 });
 resizeTabCollection();
 
+/* -------------------------------- recommend ------------------------------- */
+
+const swiperRecommend = new Swiper(".js-recommend-swiper", {
+  observer: true,
+  observeParents: true,
+  grabCursor: true,
+  spaceBetween: 20,
+  breakpoints: {
+    0: {
+      slidesPerView: 1.145,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+  },
+});
+
 /* ---------------------------------- shop ---------------------------------- */
 const swiperShop = new Swiper(".js-shop-swiper", {
   navigation: {
