@@ -159,6 +159,46 @@
         }
       }
     }
+
+    &_nav {
+      position: relative;
+
+      ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+          border-bottom: 1px solid #ccc;
+          padding-bottom: 25px;
+        }
+      }
+
+      span.indicator {
+        position: absolute;
+        bottom: 0;
+        min-width: 0;
+        width: 0;
+        height: 1px;
+        background-color: $black-cl;
+        transition: left 0.3s, width 0.3s;
+      }
+    }
+
+    &_content {
+      opacity: 0;
+      animation: 1s forwards fadeTab;
+      display: none;
+      visibility: hidden;
+
+      &.active {
+        display: block;
+        visibility: visible;
+      }
+    }
   }
 
   /* bnr */

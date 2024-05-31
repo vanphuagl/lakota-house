@@ -26,7 +26,7 @@ $(document).on("click", ".tab-option", function () {
 /* -------------------------- handle option mobile -------------------------- */
 
 function handleTabChange(tab) {
-  $(".js-options-tab .indicator").css({
+  $(".js-nav-tab .indicator").css({
     width: tab.outerWidth(),
     left: tab.position() ? tab.position().left : 0,
   });
@@ -37,6 +37,27 @@ $(document).on("click", ".js-options-tab p", function () {
   handleTabChange($(this));
 });
 handleTabChange($(".js-options-tab li.active"));
+
+/* ------------------------- handle detail products ------------------------- */
+
+let numberIndex = 0;
+$(window).on("load", function () {
+  handleTabChange($(".detail_nav li.active"));
+});
+
+$(document).on("click", ".detail_nav li", function () {
+  numberIndex = $(this).index();
+
+  if (!$(this).is("active")) {
+    $(".detail_nav li").removeClass("active");
+    $(".detail_content").removeClass("active");
+    // tab
+    $(this).addClass("active");
+    handleTabChange($(this));
+    // content
+    $(".detail_content:eq(" + numberIndex + ")").addClass("active");
+  }
+});
 
 /* --------------------------------- filter --------------------------------- */
 
