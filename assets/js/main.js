@@ -235,7 +235,7 @@ if (categoryBtn) {
 
 /* --------------------------------- contact -------------------------------- */
 
-if ($("#js-checkbox")) {
+if ($("#contactpage")) {
   // handle checkbox
   $("#js-checkbox").change(function () {
     let isCheck = this.checked;
