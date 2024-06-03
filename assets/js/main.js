@@ -211,7 +211,7 @@ const swiperProducts = new Swiper(".js-products-swiper", {
       slidesPerView: 2,
       spaceBetween: 10,
     },
-    1024: {
+    1025: {
       slidesPerView: 4,
       spaceBetween: 20,
     },
@@ -259,3 +259,43 @@ if ($("#js-checkbox")) {
     $("#js-contact-form").find("input, textarea").val("");
   });
 }
+
+/* ------------------------------ scroll to top ----------------------------- */
+
+$(".js-scrollTop").click(function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+/* ------------------------------- handle tabs ------------------------------ */
+
+function handleTabChange(tab) {
+  $(".js-nav-tab .is-indicator").css({
+    width: tab.outerWidth(),
+    left: tab.position() ? tab.position().left : 0,
+  });
+  tab = tab + 1;
+}
+
+let numberIndex = 0;
+$(window).on("load", function () {
+  if ($(".js-nav-tab")) {
+    handleTabChange($(".js-nav-tab li.active"));
+  }
+});
+
+$(document).on("click", ".js-nav-tab li", function () {
+  numberIndex = $(this).index();
+
+  if (!$(this).is("active")) {
+    $(".js-nav-tab li").removeClass("active");
+    $(".js-content-tab").removeClass("active");
+    // tab
+    $(this).addClass("active");
+    handleTabChange($(this));
+    // content
+    $(".js-content-tab:eq(" + numberIndex + ")").addClass("active");
+  }
+});

@@ -5,7 +5,7 @@
     padding-top: 15px;
     margin-bottom: 100px;
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       padding-top: 12px;
       margin-bottom: 50px;
     }
@@ -35,7 +35,7 @@
         margin-bottom: 4px;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         padding-top: 135px;
 
         &.is-collection-brand {
@@ -62,7 +62,7 @@
       grid-template-columns: repeat(4, 1fr);
       gap: 55px 20px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 25px;
         grid-template-columns: repeat(2, 1fr);
         gap: 22px 10px;
@@ -116,7 +116,7 @@
           }
         }
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           bottom: 20px;
 
           h2.title {
@@ -169,7 +169,7 @@
           }
         }
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           right: 21px;
           bottom: 25px;
 
@@ -189,7 +189,7 @@
         line-height: 1.6;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         p.keyword {
           font-size: 1.6rem;
           line-height: 1.75;
@@ -205,7 +205,7 @@
         gap: 15px;
         margin-top: 10px;
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           gap: 10px;
           margin-top: 5px;
         }
@@ -260,7 +260,7 @@
           }
         }
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           margin-bottom: 7px;
           a {
             font-size: 1.4rem;
@@ -303,7 +303,7 @@
         pointer-events: auto;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         padding: 0;
       }
 
@@ -314,8 +314,10 @@
         border-radius: 2px;
         padding: 42px 50px;
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           width: 100%;
+          height: 100%;
+          overflow: auto;
           padding: 28px 22px 50px;
         }
       }
@@ -345,7 +347,7 @@
           }
         }
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           padding-top: 17px;
           padding-right: 12px;
           pointer-events: auto;
@@ -372,7 +374,7 @@
           font-weight: 500;
         }
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           padding-right: 5px;
           h2 {
             font-size: 1.6rem;
@@ -386,7 +388,7 @@
         grid-template-columns: repeat(3, 1fr);
         gap: 42px 28px;
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           margin-top: 47px;
           display: grid;
           grid-template-columns: repeat(1, 1fr);
@@ -395,7 +397,7 @@
       }
 
       &_items {
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           position: relative;
         }
       }
@@ -408,7 +410,7 @@
           gap: 8px;
         }
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           max-height: 0;
           overflow: hidden;
           transition: all 0.5s ease-in-out;
@@ -452,7 +454,7 @@
           }
         }
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           flex-direction: column;
           gap: 15px;
           margin-top: 50px;
@@ -500,7 +502,7 @@
     opacity: 0.8;
   }
 
-  @include maxW(1023px) {
+  @include maxW(1024px) {
     bottom: 20px;
     right: 20px;
     width: 60px;

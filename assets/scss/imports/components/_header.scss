@@ -103,7 +103,7 @@
     }
   }
 
-  @include maxW(1023px) {
+  @include maxW(1024px) {
     height: 70px;
   }
 
@@ -114,7 +114,7 @@
     padding: 0 50px;
     height: 100%;
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       padding: 0 22px;
     }
   }
@@ -124,7 +124,6 @@
     ul {
       display: flex;
       align-items: center;
-      flex-wrap: wrap;
       gap: 25px;
 
       li {
@@ -138,7 +137,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         gap: 20px;
 
         li {
@@ -174,7 +173,7 @@
       padding-top: 30px;
     }
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       &.logo-white {
         padding-top: 25px;
 

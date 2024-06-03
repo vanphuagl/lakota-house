@@ -1,14 +1,147 @@
+/* Footer
+------------------------------------------------------------*/
+
+.c-footer {
+  &_container {
+    margin-top: 205px;
+
+    @include maxW(1024px) {
+      margin-top: 120px;
+    }
+  }
+
+  &_top {
+    display: grid;
+    grid-template-columns: 47.31% 1fr;
+    gap: 50px;
+    margin-bottom: 110px;
+
+    @include maxW(1024px) {
+      display: block;
+      margin-bottom: 106px;
+    }
+  }
+
+  &_left {
+    @include maxW(1024px) {
+      margin-bottom: 127px;
+    }
+  }
+
+  &_list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+
+    @include maxW(1024px) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+    }
+  }
+
+  &_group {
+    grid-column: 2 / 4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+
+    @include maxW(1024px) {
+      grid-column: auto;
+      display: block;
+    }
+  }
+
+  &_items {
+    ul.category,
+    ul.social {
+      li a,
+      li p {
+        font-size: 1.6rem;
+        line-height: 1.3;
+        font-weight: 500;
+        height: 20px;
+        margin-bottom: 10px;
+        cursor: pointer;
+      }
+    }
+
+    ul.policy {
+      li a {
+        font-family: var(--hira-fonts);
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 1.3;
+        letter-spacing: -0.26px;
+        height: 21px;
+        margin-bottom: 11px;
+      }
+    }
+
+    @include maxW(1024px) {
+      ul.category,
+      ul.social {
+        li a,
+        li p {
+          font-size: 1.4rem;
+          line-height: 1.5;
+          height: auto;
+          margin-bottom: 4px;
+        }
+      }
+
+      ul.policy {
+        margin-top: 30px;
+
+        li a {
+          font-size: 1.2rem;
+          line-height: 1.5;
+          height: auto;
+          margin-bottom: 7.6px;
+        }
+      }
+    }
+  }
+
+  &_bottom {
+    padding-bottom: 40px;
+
+    @include maxW(1024px) {
+      padding-bottom: 15px;
+    }
+  }
+
+  &_newsletter {
+    width: 63%;
+
+    @include maxW(1024px) {
+      width: 100%;
+    }
+  }
+
+  &_input {
+    margin-top: 25px;
+    position: relative;
+    width: 100%;
+
+    @include maxW(1024px) {
+      margin-top: 10px;
+    }
+  }
+}
+
 .formbox-editor_68M8J fieldset {
   border: none;
   margin: 0;
   padding: 0;
   position: relative;
 }
+
 .spacer-block_68M8J {
   min-height: 20px;
   padding: 10px 0;
   position: relative;
 }
+
 .spacer-block-line_68M8J {
   position: absolute;
   top: 50%;
@@ -17,6 +150,7 @@
   display: none;
   border-top-style: solid;
 }
+
 .formbox-editor_68M8J {
   margin: 0 auto;
   padding: 0;
@@ -24,16 +158,19 @@
   width: 100%;
   box-sizing: border-box;
 }
+
 .formbox-title_8M8J,
 .formbox-text-field_68M8J {
   margin-bottom: 0;
   color: #000000;
   font-size: 1.6rem;
 }
+
 .formbox-title_68M8J a,
 .formbox-text-field_68M8J a {
   text-decoration: none;
 }
+
 .formbox-title_68M8J p,
 .formbox-text-field_68M8J p {
   margin: 0;
@@ -41,6 +178,7 @@
   word-break: break-word;
   line-height: 1;
 }
+
 label.formbox-field-label_68M8J {
   display: block;
   padding: 0;
@@ -52,6 +190,7 @@ label.formbox-field-label_68M8J {
   letter-spacing: -0.26px;
   margin-top: 25px;
 }
+
 label.formbox-label-wrap_68M8J {
   display: block;
   margin: 10px 0 0;
@@ -63,9 +202,11 @@ label.formbox-label-wrap_68M8J {
   font-style: italic;
   color: #000000;
 }
+
 label.formbox-label-wrap_68M8J:last-of-type {
   margin-bottom: 10px;
 }
+
 label.formbox-label-wrap_68M8J input[type="checkbox"],
 label.formbox-label-wrap_68M8J input[type="radio"] {
   width: 13px;
@@ -77,6 +218,7 @@ label.formbox-label-wrap_68M8J input[type="radio"] {
   position: relative;
   top: -1px;
 }
+
 select.formbox-field_68M8J {
   background-color: #000000;
   border: 2px solid #f1f2f2;
@@ -89,6 +231,7 @@ select.formbox-field_68M8J {
   height: auto;
   padding: 2px 0px;
 }
+
 input.formbox-field_68M8J {
   color: #000;
   background-color: transparent;
@@ -99,18 +242,21 @@ input.formbox-field_68M8J {
   padding: 15px 40px 15px 0;
   width: 100%;
 }
+
 input.formbox-field_68M8J.text-placeholder {
   color: rgba($color: #000000, $alpha: 0.3);
   font-weight: normal;
   font-style: normal;
   font-size: 1.3rem;
 }
+
 .formbox-field_68M8J::-webkit-input-placeholder {
   color: rgba($color: #000000, $alpha: 0.3);
   font-weight: normal;
   font-style: normal;
   opacity: 1;
 }
+
 .formbox-field_68M8J::-moz-placeholder {
   color: rgba($color: #000000, $alpha: 0.3);
 
@@ -118,12 +264,14 @@ input.formbox-field_68M8J.text-placeholder {
   font-style: normal;
   opacity: 1;
 }
+
 .formbox-field_68M8J:-ms-input-placeholder {
   color: rgba($color: #000000, $alpha: 0.3);
   font-weight: normal;
   font-style: normal;
   opacity: 1;
 }
+
 .formbox-button_68M8J {
   line-height: 100%;
   cursor: pointer;
@@ -175,17 +323,20 @@ input.formbox-field_68M8J.text-placeholder {
   animation-timing-function: linear;
 }
 
-@include maxW(1023px) {
+@include maxW(1024px) {
   .formbox-title_68M8J p {
     margin-top: 2px;
   }
+
   label.formbox-field-label_68M8J {
     margin-top: 20px;
   }
+
   .formbox-button_68M8J {
     right: 11px;
     margin-top: -3px;
   }
+
   .input.formbox-field_68M8J {
     padding: 14px 35px 15px 0;
   }

@@ -175,10 +175,12 @@ a:hover {
 
 button,
 input,
+select,
 textarea {
   padding: 0;
   margin: 0;
   border: none;
+  outline: none;
   background: none;
   color: currentColor;
   font-family: "neue-haas-grotesk-text", "Hiragino Kaku Gothic Pro",
@@ -219,7 +221,9 @@ input[type="search"] {
   box-sizing: content-box;
 }
 
-input:focus {
+input:focus,
+select:focus,
+textarea:focus {
   outline: none;
 }
 
@@ -232,7 +236,7 @@ textarea:-webkit-autofill:focus,
 select:-webkit-autofill,
 select:-webkit-autofill:hover,
 select:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 1000px #F7F5F0 inset !important;
+  -webkit-box-shadow: 0 0 0 1000px #f7f5f0 inset !important;
 }
 
 table {

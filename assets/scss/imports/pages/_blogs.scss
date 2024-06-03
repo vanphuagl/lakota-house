@@ -6,7 +6,7 @@
     &_container {
       margin-top: 223px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 145px;
       }
     }
@@ -24,7 +24,7 @@
         letter-spacing: -2px;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         h2 {
           font-size: 3.2rem;
           letter-spacing: -1.28px;
@@ -69,7 +69,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         display: flex;
         align-items: center;
         gap: 12px;
@@ -80,7 +80,7 @@
       position: relative;
       padding-top: 18px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         padding-top: 12px;
       }
     }
@@ -102,7 +102,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         width: max-content;
         position: absolute;
         top: 25px;
@@ -135,7 +135,7 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 57px 40px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 35px;
         grid-template-columns: repeat(1, 1fr);
         gap: 43px;
@@ -156,7 +156,7 @@
       line-height: 1.1;
       letter-spacing: -0.96px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 14px;
         font-size: 2rem;
         letter-spacing: -0.8px;
@@ -166,7 +166,7 @@
     &_sub {
       margin-top: 15px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 8px;
       }
     }
@@ -177,7 +177,7 @@
     &_container {
       margin-top: 225px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 150px;
       }
     }
@@ -192,7 +192,7 @@
         font-weight: 500;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         position: unset;
 
         h2 {
@@ -225,7 +225,7 @@
         margin-top: 14px;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         h2 {
           font-size: 2.6rem;
           letter-spacing: -1.04px;
@@ -246,7 +246,7 @@
         object-fit: contain;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin: 42px -22px;
       }
     }
@@ -284,7 +284,7 @@
         object-fit: contain;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 42px;
 
         p {
@@ -322,7 +322,7 @@
         width: fit-content;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 60px;
         padding-top: 20px;
 

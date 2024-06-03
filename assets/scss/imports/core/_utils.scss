@@ -1,6 +1,28 @@
 /* Utils
 ------------------------------------------------------------*/
 
+.flex-1 {
+  flex: 1;
+}
+
+/* padding container */
+.--pad {
+  padding: 0 50px;
+
+  @include maxW(1024px) {
+    padding: 0 22px;
+  }
+}
+
+/* fonts */
+.fonts-hiragino {
+  font-family: var(--hira-fonts);
+}
+
+.fonts-itc {
+  font-family: var(--itc-fonts);
+}
+
 /* hover link */
 .u-hoverlink {
   a,
@@ -61,6 +83,7 @@
   }
 }
 
+/* keyframes */
 @keyframes lineLink {
   50% {
     left: 100%;
@@ -105,32 +128,6 @@
   }
 }
 
-.flex-1 {
-  flex: 1;
-}
-
-.--pad {
-  padding: 0 50px;
-
-  @include maxW(1023px) {
-    padding: 0 22px;
-  }
-}
-
-/* text color */
-.white-txt {
-  color: #fff;
-}
-
-/* fonts */
-.fonts-hiragino {
-  font-family: var(--hira-fonts);
-}
-
-.fonts-itc {
-  font-family: var(--itc-fonts);
-}
-
 /* only device */
 
 .sp-only,
@@ -138,7 +135,7 @@
   display: none !important;
 }
 
-@include maxW(1023px) {
+@include maxW(1024px) {
   .pc-only {
     display: none !important;
   }

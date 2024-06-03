@@ -6,30 +6,24 @@
 @import "imports/core/variables";
 @import "imports/core/mixins";
 @import "imports/core/layouts";
-@import "imports/core/components";
-
-/* header, footer */
-@import "imports/core/header";
-@import "imports/core/footer";
 
 /* components */
-@import "imports/components/newsletter";
-@import "imports/components/mega";
+@import "imports/components/common";
+@import "imports/components/header";
 @import "imports/components/menu";
+@import "imports/components/mega";
 @import "imports/components/search";
 @import "imports/components/cart";
-@import "imports/components/card";
 @import "imports/components/navi";
-@import "imports/components/form";
-@import "imports/components/recommend";
+@import "imports/components/footer";
 
 /* pages */
 @import "imports/pages/home";
 @import "imports/pages/blogs";
 @import "imports/pages/collections";
 @import "imports/pages/account";
-@import "imports/pages/contact";
 @import "imports/pages/products";
+@import "imports/pages/attention";
 
 /* utils */
 @import "imports/core/utils";

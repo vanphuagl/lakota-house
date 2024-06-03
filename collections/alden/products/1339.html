@@ -42,7 +42,7 @@
 
 <body class="fadeout">
     <!-- @header -->
-    <header class="c-header js-header-top c-header--white">
+    <header class="c-header">
         <div class="c-header_container">
             <div class="c-header_left">
                 <ul class="c-header_list">
@@ -641,11 +641,200 @@
 
     <!-- @main -->
     <main class="productspage">
-        <!-- mainvisual// -->
-        <section class="mainvisual js-mainvisual">
-            <div class="mainvisual_container"></div>
+        <!-- custom cursor// -->
+        <div class="cursor js-cursor cursor-prev">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16.16" viewBox="0 0 30 16.16">
+                <path id="Path_45" data-name="Path 45" d="M4.57-14.811l8.08-8.08v6.7H34.57v2.768H12.65v6.7Z"
+                    transform="translate(-4.57 22.891)" fill="#fff" />
+            </svg>
+        </div>
+        <div class="cursor js-cursor cursor-next">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="16.16" viewBox="0 0 30 16.16">
+                <g id="cursor_next" transform="translate(-1225.57 -895.109)">
+                    <path id="Path_45" data-name="Path 45" d="M34.57-14.811l-8.08-8.08v6.7H4.57v2.768h21.92v6.7Z"
+                        transform="translate(1221 918)" fill="#fff" />
+                </g>
+            </svg>
+        </div>
+        <!-- //custom cursor -->
+
+        <!-- fixed cart// -->
+        <div class="fixedcart js-products-fixedcart" id="fixedCart">
+            <div class="fixedcart_container">
+                <div class="fixedcart_inner pc-only">
+                    <div class="fixedcart_name">
+                        <p class="fixedcart_name_brand">Alden</p>
+                        <p class="fixedcart_name_product">1339</p>
+                    </div>
+                    <div class="fixedcart_group">
+                        <div class="fixedcart_variant">
+                            <table class="top_option">
+                                <tbody>
+                                    <tr>
+                                        <td>Size:</td>
+                                        <td class="top_option_selector is-white">
+                                            <select class="js-product-options" data-option="option-1">
+                                                <option value="6 1/2" selected="selected">6 1/2</option>
+                                                <option value="7">7</option>
+                                                <option value="7 1/2">7 1/2</option>
+                                                <option value="8">8</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                            </table>
+                            <table class="top_option">
+                                <tbody>
+                                    <tr>
+                                        <td>Color:</td>
+                                        <td class="top_option_selector is-white">
+                                            <select class="js-product-options" data-option="option-2">
+                                                <option value="Black" selected="selected">Black</option>
+                                                <option value="Pink">Pink</option>
+                                                <option value="Blue">Blue</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                            </table>
+                        </div>
+                        <button class="fixedcart_btn productspage_btn_cart is-white js-products-addtocart"
+                            id="addtocartBtn">
+                            <p>Add to Cart</p>
+                            <p class="js-setprice"><span>¥</span> 189,200</p>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="fixedcart_inner sp-only">
+                    <button class="fixedcart_btn productspage_btn_cart js-scrollTop" id="addtocartBtn">
+                        <p>Add to Cart</p>
+                        <span class="arrow">
+                            <svg role="img" aria-label="Add to Cart" xmlns="http://www.w3.org/2000/svg" width="10.828"
+                                height="6.828" viewBox="0 0 10.828 6.828">
+                                <g id="Group_255" data-name="Group 255" transform="translate(1.414 5.414) rotate(-90)">
+                                    <line id="Line_7" data-name="Line 7" y1="4" x2="4" transform="translate(0 4)"
+                                        fill="none" stroke="#fff" stroke-linecap="square" stroke-width="2" />
+                                    <line id="Line_8" data-name="Line 8" x2="4" y2="4" transform="translate(0 0)"
+                                        fill="none" stroke="#fff" stroke-linecap="square" stroke-width="2" />
+                                </g>
+                            </svg>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- //fixed cart -->
+
+        <!-- top// -->
+        <section class="top">
+            <div class="top_container">
+                <div class="top_name">
+                    <p class="productspage_brand_name">Alden</p>
+                    <h2 class="productspage_product_name">1339</h2>
+                </div>
+
+                <div class="top_center">
+                    <div class="top_swiper js-gallery-top">
+                        <div class="swiper-wrapper">
+                            <div class="top_swiper_slide swiper-slide">
+                                <figure class="top_swiper_img">
+                                    <img src="/assets/img/products/items_1.webp" alt="1339" loading="lazy" width="600"
+                                        height="600">
+                                </figure>
+                            </div>
+                            <div class="top_swiper_slide swiper-slide">
+                                <figure class="top_swiper_img">
+                                    <img src="/assets/img/products/items_2.webp" alt="1339" loading="lazy" width="600"
+                                        height="600">
+                                </figure>
+                            </div>
+                            <div class="top_swiper_slide swiper-slide">
+                                <figure class="top_swiper_img">
+                                    <img src="/assets/img/products/items_1.webp" alt="1339" loading="lazy" width="600"
+                                        height="600">
+                                </figure>
+                            </div>
+                        </div>
+
+                        <div class="top_swiper_control">
+                            <button class="top_swiper_btn swiper-button-next"></button>
+                            <button class="top_swiper_btn swiper-button-prev"></button>
+                        </div>
+
+                        <div class="top_swiper_counter js-gallery-counter">
+                            <p class="current">1</p>
+                            <span class="line"></span>
+                            <p class="total">6</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="top_bottom">
+                    <div class="top_thumbnail">
+                        <div class="top_thumbnail_swiper js-gallery-thumbnail">
+                            <div class="swiper-wrapper">
+                                <div class="top_thumbnail_slide swiper-slide">
+                                    <figure class="top_swiper_img">
+                                        <img src="/assets/img/products/items_1.webp" alt="1339" loading="lazy"
+                                            width="60" height="60">
+                                    </figure>
+                                </div>
+                                <div class="top_thumbnail_slide swiper-slide">
+                                    <figure class="top_swiper_img">
+                                        <img src="/assets/img/products/items_2.webp" alt="1339" loading="lazy"
+                                            width="60" height="60">
+                                    </figure>
+                                </div>
+                                <div class="top_thumbnail_slide swiper-slide">
+                                    <figure class="top_swiper_img">
+                                        <img src="/assets/img/products/items_1.webp" alt="1339" loading="lazy"
+                                            width="60" height="60">
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="top_group">
+                        <div class="top_variant">
+                            <table class="top_option">
+                                <tbody>
+                                    <tr>
+                                        <td>Size</td>
+                                        <td>:</td>
+                                        <td class="top_option_selector">
+                                            <select class="js-product-options" data-option="option-1">
+                                                <option value="6 1/2" selected="selected">6 1/2</option>
+                                                <option value="7">7</option>
+                                                <option value="7 1/2">7 1/2</option>
+                                                <option value="8">8</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                            </table>
+                            <table class="top_option">
+                                <tbody>
+                                    <tr>
+                                        <td>Color</td>
+                                        <td>:</td>
+                                        <td class="top_option_selector">
+                                            <select class="js-product-options" data-option="option-2">
+                                                <option value="Black" selected="selected">Black</option>
+                                                <option value="Pink">Pink</option>
+                                                <option value="Blue">Blue</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                            </table>
+                        </div>
+                        <button class="productspage_btn_cart js-products-addtocart" id="addtocartBtn">
+                            <p>Add to Cart</p>
+                            <p class="js-setprice"><span>¥</span> 189,200</p>
+                        </button>
+                    </div>
+                </div>
+            </div>
         </section>
-        <!-- //mainvisual -->
+        <!-- //top -->
 
         <!-- detail// -->
         <section class="detail js-offset-top">
@@ -653,10 +842,10 @@
                 <div class="detail_inner">
                     <div class="detail_left">
                         <div class="detail_sticky">
-                            <div class="detail_sticky_category">
+                            <div class="productspage_brand_name">
                                 <p>Alden</p>
                             </div>
-                            <h2 class="detail_sticky_name fonts-itc">1339</h2>
+                            <h2 class="productspage_product_name">1339</h2>
                             <div class="detail_sticky_desc">
                                 <p>テキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入りますテキストが入ります
                                 </p>
@@ -666,11 +855,11 @@
                             </div>
 
                             <div class="detail_sticky_group">
-                                <div class="detail_sticky_btn btn_gift">
+                                <div class="detail_sticky_btn btn_gift" data-modal-toggler="gift">
                                     <p>ギフトラッピングについて</p>
                                     <span class="ico-plus"></span>
                                 </div>
-                                <div class="detail_sticky_btn btn_store">
+                                <div class="detail_sticky_btn btn_store" data-modal-toggler="store">
                                     <p>店頭在庫について</p>
                                     <span class="ico-plus"></span>
                                 </div>
@@ -684,11 +873,11 @@
                                 <li>Detail</li>
                                 <li>Shipping<br class="sp-only" /> & Return</li>
                             </ul>
-                            <span class="indicator"></span>
+                            <span class="is-indicator"></span>
                         </div>
 
                         <div class="detail_tab">
-                            <div class="detail_content active" id="tabFeature">
+                            <div class="detail_content js-content-tab active">
                                 <div class="detail_content_inner detail_feature">
                                     <div class="detail_feature_mainvisual">
                                         <img src="/assets/img/products/mainvisual.webp" alt="1393" loading="lazy"
@@ -734,7 +923,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="detail_content" id="tabDetail">
+                            <div class="detail_content js-content-tab">
                                 <div class="detail_content_inner detail_info">
                                     <div class="detail_info_spec">
                                         <table>
@@ -856,29 +1045,46 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="detail_content" id="tabShipping">
+                            <div class="detail_content js-content-tab">
                                 <div class="detail_content_inner detail_shipping">
                                     <div class="detail_shipping_content">
                                         <p>[ 配送について ]</p>
-                                        
+
                                         <div class="detail_shipping_text">
                                             <table>
                                                 <tbody>
                                                     <tr>
-                                                        <th><p>配送可能地域</p></th>
-                                                        <td><p>日本国内</p></td>
+                                                        <th>
+                                                            <p>配送可能地域</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>日本国内</p>
+                                                        </td>
                                                     </tr>
                                                     <tr>
-                                                        <th><p>配送料金</p></th>
-                                                        <td><p>全国一律 1,100円 (税込)</p></td>
+                                                        <th>
+                                                            <p>配送料金</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>全国一律 1,100円 (税込)</p>
+                                                        </td>
                                                     </tr>
                                                     <tr>
-                                                        <th><p>配送業者</p></th>
-                                                        <td><p>ヤマト運輸</p></td>
+                                                        <th>
+                                                            <p>配送業者</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>ヤマト運輸</p>
+                                                        </td>
                                                     </tr>
                                                     <tr>
-                                                        <th><p>お引き渡し時期</p></th>
-                                                        <td><p>当社が注文を受領した日から7日以内に発送となります。都合によりご用意にお時間がかかる場合は、別途ご連絡いたします。</p></td>
+                                                        <th>
+                                                            <p>お引き渡し時期</p>
+                                                        </th>
+                                                        <td>
+                                                            <p>当社が注文を受領した日から7日以内に発送となります。都合によりご用意にお時間がかかる場合は、別途ご連絡いたします。
+                                                            </p>
+                                                        </td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -886,9 +1092,16 @@
 
                                         <div class="detail_shipping_text">
                                             <ul class="detail_shipping_list">
-                                                <li><p>ご注文毎の発送となります。同日に複数回のご注文をされた場合でも、まとめての発送は致しかねます。送料やお支払い手数料もお会計ごとに発生いたします。</p></li>
-                                                <li><p>交通状況や天候、地域により若干のお時間をいただくことが御座います。あらかじめご了承ください。</p></li>
-                                                <li><p>その他詳細は<a href="#" target="_blank">ショッピングガイドを</a>ご確認ください。</p></li>
+                                                <li>
+                                                    <p>ご注文毎の発送となります。同日に複数回のご注文をされた場合でも、まとめての発送は致しかねます。送料やお支払い手数料もお会計ごとに発生いたします。
+                                                    </p>
+                                                </li>
+                                                <li>
+                                                    <p>交通状況や天候、地域により若干のお時間をいただくことが御座います。あらかじめご了承ください。</p>
+                                                </li>
+                                                <li>
+                                                    <p>その他詳細は<a href="#" target="_blank">ショッピングガイドを</a>ご確認ください。</p>
+                                                </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -897,19 +1110,32 @@
                                         <p>[ キャンセル・返品・交換について ]</p>
 
                                         <div class="detail_shipping_text">
-                                            <p>お届けした商品が「破損・汚損していた」「不良等がある」「ご注文内容と異なる商品が届いた」場合は、至急、返品・交換をさせていただきます。お届け後7日間以内に「お問い合わせ」までご連絡下さい。引き取り方法など、ご対応方法をご案内いたします。 ご返送にかかる送料は弊社にて負担いたします。 「サイズ、イメージが違った」「注文を間違えた」等、お客様都合での返品や交換はお受けいたしかねますので、予めご了承下さい。</p>
+                                            <p>お届けした商品が「破損・汚損していた」「不良等がある」「ご注文内容と異なる商品が届いた」場合は、至急、返品・交換をさせていただきます。お届け後7日間以内に「お問い合わせ」までご連絡下さい。引き取り方法など、ご対応方法をご案内いたします。
+                                                ご返送にかかる送料は弊社にて負担いたします。
+                                                「サイズ、イメージが違った」「注文を間違えた」等、お客様都合での返品や交換はお受けいたしかねますので、予めご了承下さい。</p>
                                             <br />
                                             <p>また、以下の場合につきましては、返品・交換はいたしかねますので予めご了承ください。</p>
                                             <br />
                                             <ul>
-                                                <li><p>・商品お届けから8日以上経過した商品</p></li>
-                                                <li><p>・一度開封し、ご使用になった商品</p></li>
-                                                <li><p>・お客様のもとで汚損、または破損が生じた商品</p></li>
-                                                <li><p>・付属品等が不足している場合</p></li>
-                                                <li><p>・直接肌に触れる商品は、衛生上未着用の場合のみとさせて頂きます。</p></li>
+                                                <li>
+                                                    <p>・商品お届けから8日以上経過した商品</p>
+                                                </li>
+                                                <li>
+                                                    <p>・一度開封し、ご使用になった商品</p>
+                                                </li>
+                                                <li>
+                                                    <p>・お客様のもとで汚損、または破損が生じた商品</p>
+                                                </li>
+                                                <li>
+                                                    <p>・付属品等が不足している場合</p>
+                                                </li>
+                                                <li>
+                                                    <p>・直接肌に触れる商品は、衛生上未着用の場合のみとさせて頂きます。</p>
+                                                </li>
                                             </ul>
                                             <br />
-                                            <p>尚、ご対応可能な商品はオンラインショップでお買い上げいただいた商品のみとなります。実店舗でご購入された商品の返品・交換はお手数ですが、ご購入いただいた店舗へご連絡下さい。</p>
+                                            <p>尚、ご対応可能な商品はオンラインショップでお買い上げいただいた商品のみとなります。実店舗でご購入された商品の返品・交換はお手数ですが、ご購入いただいた店舗へご連絡下さい。
+                                            </p>
                                         </div>
                                     </div>
                                 </div>
@@ -1107,6 +1333,90 @@
             </div>
         </section>
         <!-- //recently -->
+
+        <!-- modal// -->
+        <div class="modal modal-gift js-products-modal" data-modal-gift>
+            <div class="modal_container">
+                <div class="modal_inner">
+                    <div class="modal_head">
+                        <h2>Gift Service</h2>
+                        <button class="close" aria-label="ポップアップを閉じる" aria-haspopup="false" close-modal>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14.828" height="14.828"
+                                viewBox="0 0 14.828 14.828">
+                                <g id="Group_1" data-name="Group 1" transform="translate(-1286.64 -31.086)">
+                                    <line id="Line_1" data-name="Line 1" x2="16.971"
+                                        transform="translate(1288.055 32.5) rotate(45)" fill="none" stroke="#000"
+                                        stroke-linecap="round" stroke-width="2"></line>
+                                    <line id="Line_2" data-name="Line 2" x2="16.971"
+                                        transform="translate(1288.055 44.5) rotate(-45)" fill="none" stroke="#000"
+                                        stroke-linecap="round" stroke-width="2"></line>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="modal_content">
+                        <div class="modal_items">
+                            <h3>無料ギフトラッピング</h3>
+                            <p>
+                                <img src="/assets/img/products/mainvisual.webp" alt="無料ギフトラッピング" loading="lazy"
+                                    width="550" height="367">
+                            </p>
+                            <p>
+                                「無料ラッピング対象」ラベルの表示がある箱付きの商品は、無料のギフトラッピングをご用意しております。ご希望の方は、商品をカートに追加した後、カートページより「ギフトラッピング」にチェックを入れてご購入ください。
+                            </p>
+                        </div>
+                        <div class="modal_items">
+                            <h3>ギフトボックス＆ショッピングバッグ（有料）</h3>
+                            <p>
+                                <img src="/assets/img/products/gift.webp" alt="ギフトボックス＆ショッピングバッグ（有料）" loading="lazy"
+                                    width="550" height="367">
+                            </p>
+                            <p>
+                                「ギフトボックス対応可」ラベルの表示がある箱無しの商品は、THE LAKOTA HOUSE
+                                オリジナルのギフトボックスとショッピングバッグのセットを追加購入いただくことで、ギフト仕様への変更が可能です。ご購入頂いた商品をお包みしてお届けいたします。※デザインは予告なく変更する場合がございます。
+                            </p>
+                            <p><a href="#" class="btn" target="_blank">View More</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal modal-store js-products-modal" data-modal-store>
+            <div class="modal_container">
+                <div class="modal_inner">
+                    <div class="modal_head">
+                        <h2>Store Stocks</h2>
+                        <button class="close" aria-label="ポップアップを閉じる" aria-haspopup="false" close-modal>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14.828" height="14.828"
+                                viewBox="0 0 14.828 14.828">
+                                <g id="Group_1" data-name="Group 1" transform="translate(-1286.64 -31.086)">
+                                    <line id="Line_1" data-name="Line 1" x2="16.971"
+                                        transform="translate(1288.055 32.5) rotate(45)" fill="none" stroke="#000"
+                                        stroke-linecap="round" stroke-width="2"></line>
+                                    <line id="Line_2" data-name="Line 2" x2="16.971"
+                                        transform="translate(1288.055 44.5) rotate(-45)" fill="none" stroke="#000"
+                                        stroke-linecap="round" stroke-width="2"></line>
+                                </g>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="modal_content">
+                        <h3>店頭在庫のご確認について</h3>
+                        <p>商品の店頭在庫（青山店／丸の内店／大阪店）のお問い合わせは、THE LAKOTA HOUSE オフィシャル
+                            LINEにて承っております。在庫状況のご確認をご希望の方は、以下よりお問い合わせください。</p>
+                        <p>
+                            <a href="https://page.line.me/913zvyov?openQrModal=true" target="_blank" class="btn">
+                                Official LINE
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //modal -->
     </main>
     <!-- @@main -->
 
@@ -1220,11 +1530,11 @@
     <!-- @@footer -->
 
     <!-- @script -->
-    <script src="/assets/js/jb.tracker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="/assets/js/libs.js"></script>
-    <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/jb.tracker.js"></script>
     <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/collections.js"></script>
+    <script src="/assets/js/products.js"></script>
 </body>
 
 </html>

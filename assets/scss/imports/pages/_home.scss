@@ -6,7 +6,7 @@
   .mt-container-2 {
     margin-top: 200px;
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       margin-top: 120px;
     }
   }
@@ -14,7 +14,7 @@
   .mt-container-18 {
     margin-top: 180px;
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       margin-top: 120px;
     }
   }
@@ -25,7 +25,7 @@
     line-height: 1.63;
     margin-bottom: 20px;
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       font-size: 1.8rem;
       line-height: 1.64;
       margin-bottom: 16px;
@@ -70,7 +70,7 @@
         opacity: 1;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         .swiper-pagination {
           gap: 12px;
         }
@@ -134,7 +134,7 @@
         line-height: 1.66;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         bottom: 22px;
         gap: 15px;
         flex-direction: column;
@@ -161,7 +161,7 @@
     &_container {
       padding-top: 198px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         padding-top: 118px;
 
         h2 {
@@ -176,7 +176,7 @@
       position: relative;
       padding: 0 50px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         display: block;
         padding: 0;
       }
@@ -197,7 +197,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 16px;
         width: 100%;
 
@@ -240,7 +240,7 @@
         display: none;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         h3 {
           font-size: 3.8rem;
           line-height: 1.61;
@@ -345,7 +345,7 @@
         object-fit: cover;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         width: 85.55%;
       }
     }
@@ -373,7 +373,7 @@
         font-feature-settings: "palt" 1;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         position: unset;
         opacity: 1 !important;
         visibility: visible !important;
@@ -398,7 +398,7 @@
         display: none;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 15px;
 
         &.view-product {
@@ -411,7 +411,7 @@
   /* recommend */
   .recommend {
     &_swiper {
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         .c-card_info {
           margin-top: 14px;
           display: flex;
@@ -427,7 +427,7 @@
       grid-template-columns: repeat(5, 1fr);
       gap: 20px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px 10px;
       }
@@ -440,7 +440,7 @@
         --pad-bottom: calc(337 / 252 * 100%);
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         .c-img-pb {
           --pad-bottom: calc(240 / 180 * 100%);
         }
@@ -455,14 +455,14 @@
       font-size: 1.5rem;
       line-height: 1.63;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         bottom: 8px;
         font-size: 1.4rem;
       }
     }
 
     &_btn {
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 30px;
       }
     }
@@ -475,7 +475,7 @@
       grid-template-columns: 62.69% 1fr;
       gap: 80px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         display: block;
       }
     }
@@ -485,7 +485,7 @@
         --pad-bottom: calc(560 / 840 * 100%);
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         .c-img-pb {
           --pad-bottom: calc(246 / 370 * 100%);
         }
@@ -495,7 +495,7 @@
     &_right {
       padding-right: 30px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         padding-right: 0;
       }
     }
@@ -510,7 +510,7 @@
         letter-spacing: -1.44px;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 20px;
 
         h3 {
@@ -523,7 +523,7 @@
     &_sub {
       margin-top: 12px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 10px;
       }
     }
@@ -540,7 +540,7 @@
         font-feature-settings: "palt" 1;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 25px;
 
         p {
@@ -554,7 +554,7 @@
     &_link {
       margin-top: 18px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 25px;
       }
     }
@@ -568,7 +568,7 @@
       width: 100%;
       height: 100vh;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         height: calc(100vh - 60px - 30px - 5px);
       }
     }
@@ -633,7 +633,7 @@
         transition-duration: 6s;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         padding: 0 22px;
         bottom: 24px;
 
@@ -665,7 +665,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         bottom: 55px;
         right: 30px;
         gap: 2px;
@@ -703,7 +703,7 @@
         letter-spacing: -1.44px;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         padding: 0 22px;
         bottom: 50px;
 
@@ -725,7 +725,7 @@
       color: $white-cl;
       margin-top: 5px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         padding: 0 22px;
         font-size: 1.4rem;
         margin-top: 30px;
@@ -741,7 +741,7 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 50px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         grid-template-columns: repeat(1, 1fr);
         gap: 15px;
       }
@@ -788,7 +788,7 @@
         letter-spacing: -1.12px;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         top: auto;
         bottom: 12px;
         padding: 0 20px;

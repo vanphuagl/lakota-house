@@ -6,7 +6,7 @@
     font-weight: 500;
     line-height: 1.68;
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       font-size: 1.8rem;
       line-height: 1.67;
     }
@@ -20,7 +20,7 @@
     line-height: 1.8;
     letter-spacing: -0.6px;
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       margin-top: 45px;
       font-size: 1.4rem;
       letter-spacing: -0.28px;
@@ -59,7 +59,7 @@
       margin-top: 52px;
     }
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       &_container {
         width: 100%;
         margin: 150px auto 0;
@@ -92,7 +92,7 @@
       width: 55.56%;
       margin: 222px auto 0;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         width: 100%;
         margin: 148px auto 0;
         padding: 0 22px;
@@ -127,7 +127,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         &_info {
           gap: 25px;
 
@@ -151,7 +151,7 @@
       letter-spacing: -0.56px;
       opacity: 0.5;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         font-size: 1.3rem;
         line-height: 1.6;
         letter-spacing: -0.26px;
@@ -164,7 +164,7 @@
       line-height: 1.5;
       letter-spacing: -0.6px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         font-size: 1.3rem;
         line-height: 1.6;
         letter-spacing: -0.26px;
@@ -175,7 +175,7 @@
       margin-top: 80px;
       font-family: var(--hira-fonts);
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 52px;
       }
     }
@@ -208,7 +208,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 34px;
 
         &_content {
@@ -276,7 +276,7 @@
         height: fit-content;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 38px;
 
         &_content {
@@ -298,7 +298,7 @@
     &_notes {
       margin-top: 42px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 26px;
       }
     }
@@ -317,7 +317,7 @@
         font-weight: 500;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         padding-top: 19px;
         font-size: 1.6rem;
       }
@@ -329,7 +329,7 @@
     &_inner {
       margin-top: 75px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 55px;
       }
     }
@@ -339,7 +339,7 @@
       padding-bottom: 60px;
       border-bottom: 1px solid $black-cl;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 40px;
         padding-bottom: 50px;
       }
@@ -391,7 +391,7 @@
         grid-template-columns: 23.75% 1fr;
         gap: 30px;
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           grid-template-columns: 47.3% 1fr;
         }
       }
@@ -405,7 +405,7 @@
           width: 50%;
         }
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
@@ -417,7 +417,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-bottom: 32px;
 
         &_price {
@@ -446,7 +446,7 @@
         margin-top: 42px;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         &_group {
           font-size: 1.4rem;
 
@@ -478,7 +478,7 @@
           line-height: 1.66;
         }
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           gap: 20px;
         }
       }
@@ -496,7 +496,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 40px;
         padding-bottom: 30px;
 
@@ -521,7 +521,7 @@
       margin-top: 55px;
       font-size: 1.6rem;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 24px;
         font-size: 1.4rem;
       }

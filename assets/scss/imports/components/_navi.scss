@@ -45,7 +45,7 @@
       }
     }
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       width: 100%;
       padding: 60px 22px 45px;
 
@@ -131,7 +131,7 @@
       }
     }
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       gap: 15px;
       
       button {

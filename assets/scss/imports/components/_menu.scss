@@ -32,7 +32,7 @@
       visibility 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
     transform: translate(100%);
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       width: 100%;
     }
   }
@@ -46,7 +46,7 @@
     display: flex;
     flex-direction: column;
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       padding: 22px 22px 15px;
     }
   }
@@ -69,7 +69,7 @@
       font-weight: 500;
     }
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       justify-content: space-between;
       gap: 20px;
 
@@ -95,7 +95,7 @@
   &_drawer {
     margin-top: 58px;
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       margin-top: 65px;
     }
   }
@@ -114,7 +114,7 @@
       opacity: 0.8;
     }
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       font-size: 3.2rem;
       letter-spacing: -1.28px;
     }
@@ -174,7 +174,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         gap: 22px;
 
         .plus {
@@ -200,7 +200,7 @@
     &_list {
       margin: 22px 0 34px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin: 30px 0 35px;
       }
     }
@@ -224,7 +224,7 @@
         width: fit-content;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-bottom: 22px;
 
         .child {
@@ -265,7 +265,7 @@
       margin-left: -6px;
     }
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       margin-top: 75px;
       display: block;
 
@@ -292,7 +292,7 @@
 .c-btnSearch {
   cursor: pointer;
 
-  @include maxW(1023px) {
+  @include maxW(1024px) {
     svg {
       width: 14px;
       height: auto;
@@ -347,7 +347,7 @@
     }
   }
 
-  @include maxW(1023px) {
+  @include maxW(1024px) {
     width: 25px;
     height: 25px;
 

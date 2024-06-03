@@ -1,5 +1,3 @@
-"use strict";
-
 /* ------------------------------- mainvisual ------------------------------- */
 
 const swiperMainvisual = new Swiper(".js-mainvisual-swiper", {
@@ -38,10 +36,10 @@ function doSomethingWithActiveSlide() {
 }
 
 /* ------------------------------- collection ------------------------------- */
-let numberIndex = 0;
+let numberIndexCollection = 0;
 
 $(document).on("click", ".collection_tabs li", function () {
-  numberIndex = $(this).index();
+  numberIndexCollection = $(this).index();
   if (!$(this).is("active")) {
     $(".collection_tabs li").removeClass("active");
     $(".collection_thumbs li").removeClass("active");
@@ -50,8 +48,8 @@ $(document).on("click", ".collection_tabs li", function () {
     // tab
     $(this).addClass("active");
     // content
-    $(".collection_content:eq(" + numberIndex + ")").addClass("active");
-    $(".collection_thumbs li:eq(" + numberIndex + ")").addClass("active");
+    $(".collection_content:eq(" + numberIndexCollection + ")").addClass("active");
+    $(".collection_thumbs li:eq(" + numberIndexCollection + ")").addClass("active");
   }
 });
 
@@ -81,7 +79,7 @@ const swiperRecommend = new Swiper(".js-recommend-swiper", {
     0: {
       slidesPerView: 1.145,
     },
-    1024: {
+    1025: {
       slidesPerView: 4,
     },
   },
@@ -104,7 +102,7 @@ const swiperShop = new Swiper(".js-shop-swiper", {
     0: {
       allowTouchMove: true,
     },
-    1024: {
+    1025: {
       allowTouchMove: false,
     },
   },

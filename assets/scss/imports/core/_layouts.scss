@@ -4,6 +4,12 @@
   width: device-width;
 }
 
+:root {
+  --app-height: 100vh;
+  --hira-fonts: "Hiragino Kaku Gothic Pro", "Hiragino Sans", sans-serif;
+  --itc-fonts: "itc-benguiat", serif;
+}
+
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -57,6 +63,11 @@ body {
 
   &.disable-scroll {
     overflow: hidden !important;
+  }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    left: 0;
   }
 }
 

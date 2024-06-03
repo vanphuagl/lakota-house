@@ -20,7 +20,7 @@
       max-height: calc(100vh - 60px - 60px);
     }
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       display: none;
     }
   }
@@ -33,7 +33,7 @@
 
     @include customscroll();
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       padding: 60px 22px 45px;
       max-height: 100%;
       border-bottom: 1px solid #ccc;
@@ -45,7 +45,7 @@
     grid-template-columns: 16.4% 1fr;
     gap: 10px;
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       display: block;
     }
   }
@@ -63,15 +63,8 @@
       }
     }
 
-    span.indicator {
+    span.is-indicator {
       display: none;
-      position: absolute;
-      bottom: 0;
-      min-width: 0;
-      width: 50%;
-      height: 1px;
-      background-color: #000;
-      transition: left 0.3s, width 0.3s;
     }
 
     a {
@@ -80,7 +73,7 @@
       margin-top: 30px;
     }
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       width: 100%;
@@ -95,14 +88,15 @@
         opacity: 1;
       }
 
-      span.indicator {
+      span.is-indicator {
         display: inline-block;
+        width: 50%;
       }
     }
   }
 
   &_right {
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       margin-top: 45px;
     }
   }
@@ -116,7 +110,7 @@
     grid-template-columns: repeat(5, 1fr);
     gap: 20px;
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       grid-template-columns: repeat(2, 1fr);
       gap: 25px 10px;
     }
@@ -153,7 +147,7 @@
       margin-top: 15px;
     }
 
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       p {
         font-size: 1.4rem;
         line-height: 1.68;
