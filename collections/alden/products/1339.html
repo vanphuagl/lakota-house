@@ -296,38 +296,45 @@
             </div>
             <div class="c-header_right">
                 <ul class="c-header_list">
-                    <li class="pc-only">
-                        <div class="u-hoverlink">
-                            <a href="/account/" class="c-mypage"> My Page </a>
-                        </div>
-                    </li>
-                    <li class="pc-only">
-                        <div class="u-hoverlink">
-                            <p class="c-btnCart js-btn-cart">Cart (<span>0</span>)</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="c-btnSearch js-btn-search">
-                            <p class="icon-search">
-                                <svg role="img" aria-label="Search" id="btn-search" data-name="btn-search"
-                                    xmlns="http://www.w3.org/2000/svg" width="17.414" height="17.414"
-                                    viewBox="0 0 17.414 17.414">
-                                    <g id="Ellipse_1" data-name="Ellipse 1" fill="none" stroke="#000" stroke-width="2">
-                                        <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
-                                        <circle cx="6.5" cy="6.5" r="5.5" fill="none" />
-                                    </g>
-                                    <line id="Line_3" data-name="Line 3" x2="5" y2="5" transform="translate(11 11)"
-                                        fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" />
-                                </svg>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <buttons class="c-btnMenu c-header_hamburger js-btn-menu" aria-label="ポップアップを開く" tabindex="0">
-                            <span></span>
-                            <span></span>
-                        </buttons>
-                    </li>
+                    <div class="c-header_right_group">
+                        <li class="pc-only">
+                            <div class="u-hoverlink">
+                                <a href="/account/" class="c-mypage"> My Page </a>
+                            </div>
+                        </li>
+                        <li class="pc-only">
+                            <div class="u-hoverlink">
+                                <p class="c-btnCart js-btn-cart">Cart (<span>0</span>)</p>
+                            </div>
+                        </li>
+                    </div>
+
+                    <div class="c-header_right_group c-header_right_group-ico">
+                        <li>
+                            <div class="c-btnSearch js-btn-search">
+                                <p class="icon-search">
+                                    <svg role="img" aria-label="Search" id="btn-search" data-name="btn-search"
+                                        xmlns="http://www.w3.org/2000/svg" width="17.414" height="17.414"
+                                        viewBox="0 0 17.414 17.414">
+                                        <g id="Ellipse_1" data-name="Ellipse 1" fill="none" stroke="#000"
+                                            stroke-width="2">
+                                            <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+                                            <circle cx="6.5" cy="6.5" r="5.5" fill="none" />
+                                        </g>
+                                        <line id="Line_3" data-name="Line 3" x2="5" y2="5" transform="translate(11 11)"
+                                            fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" />
+                                    </svg>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <buttons class="c-btnMenu c-header_hamburger js-btn-menu" aria-label="ポップアップを開く"
+                                tabindex="0">
+                                <span></span>
+                                <span></span>
+                            </buttons>
+                        </li>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -353,7 +360,7 @@
                                     <p class="c-btnCart js-btn-cart">Cart (<span>0</span>)</p>
                                 </div>
                             </div>
-                            <div class="group">
+                            <div class="group group-ico">
                                 <div class="c-btnSearch c-menu_link js-btn-search">
                                     <p class="icon-search">
                                         <svg role="img" aria-label="Search" id="btn-search" data-name="btn-search"
@@ -733,25 +740,28 @@
                 </div>
 
                 <div class="top_center">
-                    <div class="top_swiper js-gallery-top">
+                    <div class="top_swiper js-pswp-gallery js-gallery-top" id="my-gallery">
                         <div class="swiper-wrapper">
                             <div class="top_swiper_slide swiper-slide">
-                                <figure class="top_swiper_img">
-                                    <img src="/assets/img/products/items_1.webp" alt="1339" loading="lazy" width="600"
-                                        height="600">
-                                </figure>
+                                <a class="top_swiper_img open-gallery" itemprop="contentUrl" href="/assets/img/products/items_1.webp"
+                                    data-pswp-width="900" data-pswp-height="900">
+                                    <img src="/assets/img/products/items_1.webp" alt="Alden"
+                                        itemprop="thumbnail">
+                                </a>
                             </div>
                             <div class="top_swiper_slide swiper-slide">
-                                <figure class="top_swiper_img">
-                                    <img src="/assets/img/products/items_2.webp" alt="1339" loading="lazy" width="600"
-                                        height="600">
-                                </figure>
+                                <a class="top_swiper_img open-gallery" itemprop="contentUrl" href="/assets/img/products/items_2.webp"
+                                    data-pswp-width="900" data-pswp-height="900">
+                                    <img src="/assets/img/products/items_2.webp" alt="Alden"
+                                        itemprop="thumbnail">
+                                </a>
                             </div>
                             <div class="top_swiper_slide swiper-slide">
-                                <figure class="top_swiper_img">
-                                    <img src="/assets/img/products/items_1.webp" alt="1339" loading="lazy" width="600"
-                                        height="600">
-                                </figure>
+                                <a class="top_swiper_img open-gallery" itemprop="contentUrl" href="/assets/img/products/items_1.webp"
+                                    data-pswp-width="900" data-pswp-height="900">
+                                    <img src="/assets/img/products/items_1.webp" alt="Alden"
+                                        itemprop="thumbnail">
+                                </a>
                             </div>
                         </div>
 
@@ -1175,7 +1185,7 @@
         <!-- //only is brand Alden -->
 
         <!-- related// -->
-        <section class="related c-prodsw">
+        <section class="related c-prodsw js-proffset-top">
             <div class="related_container c-prodsw_container --pad">
                 <h2 class="c-prodsw_head">Related Products</h2>
 
@@ -1247,6 +1257,31 @@
                                 </a>
                                 <a href="/collections/brand.html" class="c-card_tag">Alden</a>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="c-prodsw_control">
+                        <div class="c-prodsw_cusbtn c-prodsw_cusbtn_prev swiper-button-prev">
+                            <svg role="img" aria-label="Prev" xmlns="http://www.w3.org/2000/svg" width="9.828"
+                                height="16.828" viewBox="0 0 9.828 16.828">
+                                <g id="Group_479" data-name="Group 479" transform="translate(1.414 1.414)">
+                                    <line id="Line_7" data-name="Line 7" x1="7" y2="7" fill="none" stroke="#fff"
+                                        stroke-linecap="square" stroke-width="2" />
+                                    <line id="Line_8" data-name="Line 8" x1="7" y1="7" transform="translate(0 7)"
+                                        fill="none" stroke="#fff" stroke-linecap="square" stroke-width="2" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="c-prodsw_cusbtn c-prodsw_cusbtn_next swiper-button-next">
+                            <svg role="img" aria-label="Next" xmlns="http://www.w3.org/2000/svg" width="9.828"
+                                height="16.828" viewBox="0 0 9.828 16.828">
+                                <g id="Group_479" data-name="Group 479" transform="translate(1.414 1.414)">
+                                    <line id="Line_7" data-name="Line 7" x2="7" y2="7" fill="none" stroke="#fff"
+                                        stroke-linecap="square" stroke-width="2" />
+                                    <line id="Line_8" data-name="Line 8" y1="7" x2="7" transform="translate(0 7)"
+                                        fill="none" stroke="#fff" stroke-linecap="square" stroke-width="2" />
+                                </g>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -1327,6 +1362,31 @@
                                 </a>
                                 <a href="/collections/brand.html" class="c-card_tag">Alden</a>
                             </div>
+                        </div>
+                    </div>
+
+                    <div class="c-prodsw_control">
+                        <div class="c-prodsw_cusbtn c-prodsw_cusbtn_prev swiper-button-prev">
+                            <svg role="img" aria-label="Prev" xmlns="http://www.w3.org/2000/svg" width="9.828"
+                                height="16.828" viewBox="0 0 9.828 16.828">
+                                <g id="Group_479" data-name="Group 479" transform="translate(1.414 1.414)">
+                                    <line id="Line_7" data-name="Line 7" x1="7" y2="7" fill="none" stroke="#fff"
+                                        stroke-linecap="square" stroke-width="2" />
+                                    <line id="Line_8" data-name="Line 8" x1="7" y1="7" transform="translate(0 7)"
+                                        fill="none" stroke="#fff" stroke-linecap="square" stroke-width="2" />
+                                </g>
+                            </svg>
+                        </div>
+                        <div class="c-prodsw_cusbtn c-prodsw_cusbtn_next swiper-button-next">
+                            <svg role="img" aria-label="Next" xmlns="http://www.w3.org/2000/svg" width="9.828"
+                                height="16.828" viewBox="0 0 9.828 16.828">
+                                <g id="Group_479" data-name="Group 479" transform="translate(1.414 1.414)">
+                                    <line id="Line_7" data-name="Line 7" x2="7" y2="7" fill="none" stroke="#fff"
+                                        stroke-linecap="square" stroke-width="2" />
+                                    <line id="Line_8" data-name="Line 8" y1="7" x2="7" transform="translate(0 7)"
+                                        fill="none" stroke="#fff" stroke-linecap="square" stroke-width="2" />
+                                </g>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -1529,12 +1589,15 @@
     </footer>
     <!-- @@footer -->
 
+    <!-- @photoswipe -->
+
+
     <!-- @script -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="/assets/js/libs.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="/assets/js/jb.tracker.js"></script>
     <script src="/assets/js/main.js"></script>
-    <script src="/assets/js/products.js"></script>
+    <script src="/assets/js/products.js" type="module"></script>
 </body>
 
 </html>

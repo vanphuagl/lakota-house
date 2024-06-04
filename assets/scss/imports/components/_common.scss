@@ -414,11 +414,6 @@
       }
 
       input,
-      textarea {
-        -webkit-appearance: none;
-      }
-
-      input,
       select,
       textarea {
         width: 100%;
@@ -429,6 +424,7 @@
         outline: none;
         box-sizing: border-box;
         position: relative;
+        -webkit-appearance: none;
       }
 
       textarea {
@@ -436,10 +432,12 @@
       }
 
       select {
-        width: calc(100% - 35px);
+        width: calc(100% - 15px);
         border-radius: 5px;
-        padding: 0 25px 0 4px;
-        margin-left: -10px;
+        padding: 0 25px 0 8px;
+        margin-left: -8px;
+        background: url(../img/arrow-down-black.webp) no-repeat center right rgba(0, 0, 0, 0);
+        background-size: 12px 6px;
       }
 
       @include maxW(1024px) {
@@ -488,6 +486,11 @@
         &:after {
           content: none !important;
         }
+
+        select {
+          padding-left: 0;
+          margin-left: 0;
+        }
       }
 
       &_name {
@@ -529,9 +532,64 @@
   &_swiper {
     overflow: hidden;
     margin: 0 -50px;
+    position: relative;
+
+    &:hover {
+      .c-prodsw_cusbtn {
+        transform: translateZ(0);
+      }
+    }
 
     @include maxW(1024px) {
       margin: 0 -22px;
+    }
+  }
+
+  &_cusbtn {
+    position: absolute;
+    z-index: 60;
+    top: calc(50% - 80px);
+    display: flex;
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+    pointer-events: auto;
+    transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+
+    &:after {
+      content: "";
+    }
+
+    svg {
+      width: 10px;
+      height: auto;
+    }
+
+    &.swiper-button-disabled.c-prodsw_cusbtn_prev {
+      transform: translate3d(-80px, 0, 0);
+    }
+    &.swiper-button-disabled.c-prodsw_cusbtn_next {
+      transform: translate3d(80px, 0, 0);
+    }
+
+    &_next {
+      right: 0;
+      transform: translate3d(80px, 0, 0);
+
+      svg {
+        margin-left: 5px;
+      }
+    }
+
+    &_prev {
+      left: 0;
+      transform: translate3d(-80px, 0, 0);
+    }
+
+    @include maxW(1023px) {
+      display: none;
     }
   }
 }
@@ -548,6 +606,15 @@
       top: 15px;
       padding: 0 20px;
       z-index: 2;
+    }
+
+    @include maxW(1023px) {
+      font-size: 1.2rem;
+
+      p.label {
+        top: 10px;
+        padding: 0 15px;
+      }
     }
   }
 
@@ -584,7 +651,7 @@
       display: block;
 
       p {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
         line-height: 1.4;
       }
     }
@@ -601,8 +668,8 @@
     }
 
     @include maxW(1024px) {
-      font-size: 1.4rem;
-      line-height: 1.64;
+      font-size: 1.3rem;
+      line-height: 1.4;
     }
   }
 }

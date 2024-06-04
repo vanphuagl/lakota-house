@@ -36,7 +36,6 @@
     @include maxW(1024px) {
       padding: 60px 22px 45px;
       max-height: 100%;
-      border-bottom: 1px solid #ccc;
     }
   }
 
@@ -54,7 +53,7 @@
     p {
       font-size: 2.2rem;
       line-height: 1.4;
-      letter-spacing: -1px;
+      letter-spacing: 0;
       opacity: 0.3;
       cursor: pointer;
 

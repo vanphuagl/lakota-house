@@ -48,8 +48,12 @@ $(document).on("click", ".collection_tabs li", function () {
     // tab
     $(this).addClass("active");
     // content
-    $(".collection_content:eq(" + numberIndexCollection + ")").addClass("active");
-    $(".collection_thumbs li:eq(" + numberIndexCollection + ")").addClass("active");
+    $(".collection_content:eq(" + numberIndexCollection + ")").addClass(
+      "active"
+    );
+    $(".collection_thumbs li:eq(" + numberIndexCollection + ")").addClass(
+      "active"
+    );
   }
 });
 
@@ -75,6 +79,11 @@ const swiperRecommend = new Swiper(".js-recommend-swiper", {
   observeParents: true,
   grabCursor: true,
   spaceBetween: 20,
+  speed: 700,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
   breakpoints: {
     0: {
       slidesPerView: 1.145,

@@ -152,10 +152,32 @@
     position: relative;
     z-index: 10;
 
+    ul {
+      gap: 50px;
+    }
+
+    &_group {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      &-ico {
+        gap: 35px;
+      }
+    }
+
     .c-btnSearch {
       g,
       line {
         transition: stroke 0.3s ease-in;
+      }
+    }
+
+    @include maxW(1023px) {
+      &_group {
+        &-ico {
+          gap: 20px;
+        }
       }
     }
   }

@@ -48,9 +48,13 @@ if ($(".c-filter")) {
   $(window).on("pageshow scroll", function () {
     countFilter();
     let scrollf = $(window).scrollTop();
+    let footerSetTop = $(".c-footer").offset().top;
+
     scrollf >= 100
       ? $(".c-filter").addClass("is-show")
       : $(".c-filter").removeClass("is-show");
+
+    scrollf + 1000 >= footerSetTop && $(".c-filter").removeClass("is-show");
   });
 
   $("[data-filter-toggler]").on("click", function () {

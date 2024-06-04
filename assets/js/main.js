@@ -37,6 +37,13 @@ function detectOverlay(detect) {
   }
 }
 
+$(".js-overlay").on("click", function () {
+  $(".js-c-menu").removeClass("is-open");
+  $(".js-c-search").removeClass("is-open");
+  $(".js-c-cart").removeClass("is-open");
+  detectOverlay(false);
+});
+
 /* ---------------------------------- menu ---------------------------------- */
 
 // toggle menu
@@ -175,7 +182,7 @@ $(document).on("click", ".tab-link", function () {
 
 $(document).on(
   "click",
-  'a:not([href^="#"]):not([target]):not([href^="mailto"]):not([href^="tel"])',
+  'a:not([href^="#"]):not([target]):not([href^="mailto"]):not([href^="tel"]):not(".open-gallery")',
   function (e) {
     e.preventDefault();
     const url = $(this).attr("href");
@@ -206,6 +213,11 @@ const swiperProducts = new Swiper(".js-products-swiper", {
   observer: true,
   observeParents: true,
   grabCursor: true,
+  speed: 700,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
   breakpoints: {
     0: {
       slidesPerView: 2,

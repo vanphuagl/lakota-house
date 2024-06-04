@@ -15,10 +15,11 @@
         margin-top: 8px;
 
         li {
-          padding-left: 8px;
-          text-indent: -18px;
+          padding-left: 24px;
+          text-indent: -24px;
 
           &:before {
+            font-family: var(--hira-fonts);
             content: "・";
             padding-right: 6px;
           }
@@ -83,7 +84,7 @@
         margin-top: 10px;
 
         p {
-          padding-left: 20px;
+          padding-left: 24px;
           text-indent: -24px;
 
           &:before {
@@ -102,6 +103,10 @@
           line-height: 1.75;
           letter-spacing: -0.24px;
         }
+
+        &_tlt {
+          font-size: 1.3rem;
+        }
       }
     }
 
@@ -117,6 +122,15 @@
       align-items: center;
       gap: 10px;
       padding: 0 45px;
+
+      p {
+        font-family: var(--hira-fonts);
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: -0.56px;
+        line-height: 1.75;
+        margin-top: 4px;
+      }
 
       input[type="checkbox"] {
         border: 1px solid #000;
@@ -155,6 +169,11 @@
       @include maxW(1024px) {
         height: 55px;
         padding: 0 25px;
+
+        p {
+          font-size: 1.3rem;
+          margin-top: 2px;
+        }
       }
     }
 

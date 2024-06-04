@@ -459,7 +459,8 @@
           gap: 15px;
           margin-top: 50px;
 
-          a,button {
+          a,
+          button {
             width: 100%;
             font-size: 1.4rem;
           }
@@ -496,6 +497,11 @@
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
+  }
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
   }
 
   &:hover {

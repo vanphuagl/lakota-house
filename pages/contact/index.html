@@ -3,7 +3,8 @@
 
 <head>
     <!-- @meta -->
-    <meta charset="UTF-8" />
+    <!-- <meta charset="UTF-8" /> -->
+    <meta http-equiv-"Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="title" content="" />
@@ -296,38 +297,43 @@
             </div>
             <div class="c-header_right">
                 <ul class="c-header_list">
-                    <li class="pc-only">
-                        <div class="u-hoverlink">
-                            <a href="/account/" class="c-mypage"> My Page </a>
-                        </div>
-                    </li>
-                    <li class="pc-only">
-                        <div class="u-hoverlink">
-                            <p class="c-btnCart js-btn-cart">Cart (<span>0</span>)</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="c-btnSearch js-btn-search">
-                            <p class="icon-search">
-                                <svg role="img" aria-label="Search" id="btn-search" data-name="btn-search"
-                                    xmlns="http://www.w3.org/2000/svg" width="17.414" height="17.414"
-                                    viewBox="0 0 17.414 17.414">
-                                    <g id="Ellipse_1" data-name="Ellipse 1" fill="none" stroke="#000" stroke-width="2">
-                                        <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
-                                        <circle cx="6.5" cy="6.5" r="5.5" fill="none" />
-                                    </g>
-                                    <line id="Line_3" data-name="Line 3" x2="5" y2="5" transform="translate(11 11)"
-                                        fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" />
-                                </svg>
-                            </p>
-                        </div>
-                    </li>
-                    <li>
-                        <buttons class="c-btnMenu c-header_hamburger js-btn-menu" aria-label="ポップアップを開く" tabindex="0">
-                            <span></span>
-                            <span></span>
-                        </buttons>
-                    </li>
+                    <div class="c-header_right_group">
+                        <li class="pc-only">
+                            <div class="u-hoverlink">
+                                <a href="/account/" class="c-mypage"> My Page </a>
+                            </div>
+                        </li>
+                        <li class="pc-only">
+                            <div class="u-hoverlink">
+                                <p class="c-btnCart js-btn-cart">Cart (<span>0</span>)</p>
+                            </div>
+                        </li>
+                    </div>
+
+                    <div class="c-header_right_group c-header_right_group-ico">
+                        <li>
+                            <div class="c-btnSearch js-btn-search">
+                                <p class="icon-search">
+                                    <svg role="img" aria-label="Search" id="btn-search" data-name="btn-search"
+                                        xmlns="http://www.w3.org/2000/svg" width="17.414" height="17.414"
+                                        viewBox="0 0 17.414 17.414">
+                                        <g id="Ellipse_1" data-name="Ellipse 1" fill="none" stroke="#000" stroke-width="2">
+                                            <circle cx="6.5" cy="6.5" r="6.5" stroke="none" />
+                                            <circle cx="6.5" cy="6.5" r="5.5" fill="none" />
+                                        </g>
+                                        <line id="Line_3" data-name="Line 3" x2="5" y2="5" transform="translate(11 11)"
+                                            fill="none" stroke="#000" stroke-linecap="round" stroke-width="2" />
+                                    </svg>
+                                </p>
+                            </div>
+                        </li>
+                        <li>
+                            <buttons class="c-btnMenu c-header_hamburger js-btn-menu" aria-label="ポップアップを開く" tabindex="0">
+                                <span></span>
+                                <span></span>
+                            </buttons>
+                        </li>
+                    </div>
                 </ul>
             </div>
         </div>
@@ -353,7 +359,7 @@
                                     <p class="c-btnCart js-btn-cart">Cart (<span>0</span>)</p>
                                 </div>
                             </div>
-                            <div class="group">
+                            <div class="group group-ico">
                                 <div class="c-btnSearch c-menu_link js-btn-search">
                                     <p class="icon-search">
                                         <svg role="img" aria-label="Search" id="btn-search" data-name="btn-search"
@@ -816,25 +822,6 @@
                                     <input size="40" id="ContactForm-EmailConfirm" required aria-required="true"
                                         aria-invalid="false" value="" type="email" name="customer[email_confirm]"
                                         placeholder="確認のためもう一度入力してください">
-                                </div>
-                            </div>
-                            <div class="c-form_control">
-                                <div class="c-form_control_name">
-                                    <label for="ContactForm-category">お問い合わせ種別</label>
-                                    <span class="req">＊</span>
-                                </div>
-                                <div class="c-form_control_input">
-                                    <select id="ContactForm-category" required aria-required="true" aria-invalid="false"
-                                        name="customer[category]">
-                                        <option value="" disabled hidden selected>選択してください
-                                        </option>
-                                        <option value="製作のご相談・ご依頼 / PRODUCTION CONSULTATION, REQUEST">製作のご相談・ご依頼 /
-                                            PRODUCTION CONSULTATION, REQUEST</option>
-                                        <option value="求人に関するお問い合わせ /
-                                        RECRUITMENT INQUIRIES">求人に関するお問い合わせ /
-                                            RECRUITMENT INQUIRIES</option>
-                                        <option value="その他弊社へのお問い合わせ / OTHERS">その他弊社へのお問い合わせ / OTHERS</option>
-                                    </select>
                                 </div>
                             </div>
                             <div class="c-form_control c-form_control_inquiry">

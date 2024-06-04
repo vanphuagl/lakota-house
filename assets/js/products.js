@@ -1,4 +1,3 @@
-
 /* ---------------------------------- modal --------------------------------- */
 
 const toggleModals = $("[data-modal-toggler]");
@@ -102,6 +101,7 @@ const productsThumbs = new Swiper(".js-gallery-thumbnail", {
 
 const productsTop = new Swiper(".js-gallery-top", {
   centeredSlides: true,
+  speed: 700,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
@@ -127,7 +127,8 @@ const productsTop = new Swiper(".js-gallery-top", {
       document.querySelector(".js-gallery-counter .current").innerHTML = e;
     },
     init: function (sw) {
-      document.querySelector(".js-gallery-counter .total").innerHTML = sw.slides.length;
+      document.querySelector(".js-gallery-counter .total").innerHTML =
+        sw.slides.length;
     },
   },
 });
@@ -136,9 +137,66 @@ const productsTop = new Swiper(".js-gallery-top", {
 
 $(window).on("pageshow scroll", function () {
   let hSize = $(".js-offset-top").offset().top,
+    relatedSize = $(".js-proffset-top").offset().top,
     scroll = $(window).scrollTop();
 
-  scroll >= hSize
-    ? $(".js-products-fixedcart").addClass("is-show")
-    : $(".js-products-fixedcart").removeClass("is-show");
+  if ($(window).width() > 1023) {
+    scroll >= hSize
+      ? $(".js-products-fixedcart").addClass("is-show")
+      : $(".js-products-fixedcart").removeClass("is-show");
+  } else {
+    scroll >= 100
+      ? $(".js-products-fixedcart").addClass("is-show")
+      : $(".js-products-fixedcart").removeClass("is-show");
+  }
+  scroll + 1000 >= relatedSize &&
+    $(".js-products-fixedcart").removeClass("is-show");
+});
+
+/* ------------------------------- photoswipe ------------------------------- */
+
+import PhotoSwipeLightbox from "https://unpkg.com/photoswipe@5.4.2/dist/photoswipe-lightbox.esm.js";
+import PhotoSwipe from "https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.esm.js";
+
+const photo_swipe_options = {
+  gallery: "#my-gallery",
+  pswpModule: PhotoSwipe,
+  bgOpacity: 0.8,
+  showHideOpacity: true,
+  children: "a",
+  loop: true,
+  showHideAnimationType: "fade" /* options: fade, zoom, none */,
+  /* Click on image moves to the next slide */
+  // imageClickAction: "next",
+  // tapAction: "next",
+  /* ## Hiding a specific UI element ## */
+  // zoom: true,
+  // close: true,
+  // counter: true,
+  // arrowKeys: true,
+  // wheelToZoom: true,
+};
+
+const lightbox = new PhotoSwipeLightbox(photo_swipe_options);
+lightbox.init();
+
+lightbox.on("change", () => {
+  const { pswp } = lightbox;
+  productsTop.slideTo(pswp.currIndex, 0, false);
+});
+
+/* ### PhotoSwipe events ### */
+lightbox.on("afterInit", () => {
+  const { pswp } = lightbox;
+  if (productsTop.params.autoplay.enabled) {
+    productsTop.autoplay.stop();
+  }
+});
+
+lightbox.on("closingAnimationStart", () => {
+  const { pswp } = lightbox;
+  productsTop.slideTo(pswp.currIndex, 0, false);
+  if (productsTop.params.autoplay.enabled) {
+    productsTop.autoplay.start();
+  }
 });
