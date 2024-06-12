@@ -165,13 +165,24 @@
     &_items {
       padding: 50px 0;
       border-bottom: 1px solid #ccc;
-      display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 10px;
 
+      opacity: 0;
+      display: none;
+
+      &.active {
+        opacity: 1;
+        display: grid;
+        animation: fadeIn 0.65s ease forwards;
+      }
+
       @include maxW(1023px) {
         padding: 40px 0;
-        display: block;
+
+        &.active {
+          display: block;
+        }
       }
     }
 
@@ -278,6 +289,11 @@
         letter-spacing: -0.32px;
         line-height: 1.66;
         font-weight: 400;
+        opacity: 0.5;
+
+        &.active {
+          opacity: 1;
+        }
       }
 
       @include maxW(1023px) {
@@ -310,5 +326,14 @@
         margin-top: 53px;
       }
     }
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

@@ -40,7 +40,7 @@
     <title>Stockist | The Lakota House</title>
 </head>
 
-<body>
+<body class="fadeout">
     <!-- @header -->
     <header class="c-header">
         <div class="c-header_container">
@@ -655,21 +655,21 @@
                     <div class="c-stockist_list">
                         <div class="c-stockist_left">
                             <div class="c-stockist_group">
-                                <a href="#chubu" data-filter-tag="chubu">北海道 / 東北</a>
-                                <a href="#kanto" data-filter-tag="kanto">関東</a>
-                                <a href="#hokkaido-tohoku" data-filter-tag="hokkaido">中部</a>
+                                <a href="#chubu" class="js-stockist-option" data-filter-tag="chubu">北海道 / 東北</a>
+                                <a href="#kanto" class="js-stockist-option" data-filter-tag="kanto">関東</a>
+                                <a href="#hokkaido-tohoku" class="js-stockist-option" data-filter-tag="hokkaido-tohoku">中部</a>
                             </div>
                             <div class="c-stockist_group">
-                                <a href="#kinki" data-filter-tag="kinki">近畿</a>
-                                <a href="#chugoku-shikoku" data-filter-tag="chugoku">中国 / 四国</a>
-                                <a href="#kyushu-okinawa" data-filter-tag="kyushu">九州 / 沖縄</a>
+                                <a href="#kinki" class="js-stockist-option" data-filter-tag="kinki">近畿</a>
+                                <a href="#chugoku-shikoku" class="js-stockist-option" data-filter-tag="chugoku-shikoku">中国 / 四国</a>
+                                <a href="#kyushu-okinawa" class="js-stockist-option" data-filter-tag="kyushu-okinawa">九州 / 沖縄</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="stockist_list">
-                    <div class="stockist_items" data-tag="hokkaido">
+                <ul class="stockist_list">
+                    <li class="stockist_items" data-tag="hokkaido-tohoku">
                         <div class="stockist_heading">
                             <h2>北海道</h2>
                         </div>
@@ -695,8 +695,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="stockist_items" data-tag="hokkaido">
+                    </li>
+                    <li class="stockist_items" data-tag="hokkaido-tohoku">
                         <div class="stockist_heading">
                             <h2>青森</h2>
                         </div>
@@ -712,8 +712,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="stockist_items" data-tag="kanto">
+                    </li>
+                    <li class="stockist_items" data-tag="kanto">
                         <div class="stockist_heading">
                             <h2>東京</h2>
                         </div>
@@ -814,8 +814,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="stockist_items" data-tag="kanto">
+                    </li>
+                    <li class="stockist_items" data-tag="kanto">
                         <div class="stockist_heading">
                             <h2>青森</h2>
                         </div>
@@ -831,8 +831,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="stockist_items" data-tag="kanto">
+                    </li>
+                    <li class="stockist_items" data-tag="kanto">
                         <div class="stockist_heading">
                             <h2>栃木</h2>
                         </div>
@@ -848,8 +848,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="stockist_items" data-tag="kanto">
+                    </li>
+                    <li class="stockist_items" data-tag="kanto">
                         <div class="stockist_heading">
                             <h2>群馬</h2>
                         </div>
@@ -865,8 +865,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="stockist_items" data-tag="chubu">
+                    </li>
+                    <li class="stockist_items" data-tag="chubu">
                         <div class="stockist_heading">
                             <h2>新潟</h2>
                         </div>
@@ -882,8 +882,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="stockist_items" data-tag="chubu">
+                    </li>
+                    <li class="stockist_items" data-tag="chubu">
                         <div class="stockist_heading">
                             <h2>富山</h2>
                         </div>
@@ -899,8 +899,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="stockist_items" data-tag="chubu">
+                    </li>
+                    <li class="stockist_items" data-tag="chubu">
                         <div class="stockist_heading">
                             <h2>福井</h2>
                         </div>
@@ -916,8 +916,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="stockist_items" data-tag="chubu">
+                    </li>
+                    <li class="stockist_items" data-tag="chubu">
                         <div class="stockist_heading">
                             <h2>静岡</h2>
                         </div>
@@ -933,8 +933,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="stockist_items" data-tag="chubu">
+                    </li>
+                    <li class="stockist_items" data-tag="chubu">
                         <div class="stockist_heading">
                             <h2>愛知</h2>
                         </div>
@@ -966,8 +966,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="stockist_items" data-tag="kinki">
+                    </li>
+                    <li class="stockist_items" data-tag="kinki">
                         <div class="stockist_heading">
                             <h2>滋賀</h2>
                         </div>
@@ -983,8 +983,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="stockist_items" data-tag="kinki">
+                    </li>
+                    <li class="stockist_items" data-tag="kinki">
                         <div class="stockist_heading">
                             <h2>京都</h2>
                         </div>
@@ -1000,8 +1000,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="stockist_items" data-tag="kinki">
+                    </li>
+                    <li class="stockist_items" data-tag="kinki">
                         <div class="stockist_heading">
                             <h2>大阪</h2>
                         </div>
@@ -1032,8 +1032,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="stockist_items" data-tag="chugoku">
+                    </li>
+                    <li class="stockist_items" data-tag="chugoku-shikoku">
                         <div class="stockist_heading">
                             <h2>広島</h2>
                         </div>
@@ -1049,8 +1049,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="stockist_items" data-tag="kyushu">
+                    </li>
+                    <li class="stockist_items" data-tag="kyushu-okinawa">
                         <div class="stockist_heading">
                             <h2>福岡</h2>
                         </div>
@@ -1103,8 +1103,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="stockist_items" data-tag="kyushu">
+                    </li>
+                    <li class="stockist_items" data-tag="kyushu-okinawa">
                         <div class="stockist_heading">
                             <h2>長崎</h2>
                         </div>
@@ -1120,8 +1120,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="stockist_items" data-tag="kyushu">
+                    </li>
+                    <li class="stockist_items" data-tag="kyushu-okinawa">
                         <div class="stockist_heading">
                             <h2>熊本</h2>
                         </div>
@@ -1144,8 +1144,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="stockist_items" data-tag="kyushu">
+                    </li>
+                    <li class="stockist_items" data-tag="kyushu-okinawa">
                         <div class="stockist_heading">
                             <h2>沖縄</h2>
                         </div>
@@ -1161,8 +1161,8 @@
                                 </a>
                             </div>
                         </div>
-                    </div>
-                </div>
+                    </li>
+                </ul>
             </div>
         </section>
     </main>
@@ -1281,6 +1281,7 @@
     <script src="/assets/js/libs.js"></script>
     <script src="/assets/js/jb.tracker.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/shop.js"></script>
 </body>
 
 </html>
