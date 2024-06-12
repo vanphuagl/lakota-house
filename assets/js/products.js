@@ -161,7 +161,7 @@ import PhotoSwipe from "https://unpkg.com/photoswipe@5.4.2/dist/photoswipe.esm.j
 const photo_swipe_options = {
   gallery: "#my-gallery",
   pswpModule: PhotoSwipe,
-  bgOpacity: 0.8,
+  bgOpacity: 1,
   showHideOpacity: true,
   children: "a",
   loop: true,
