@@ -131,7 +131,7 @@
       overflow: hidden;
       background-color: #efece5;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         height: var(--app-height);
       }
     }

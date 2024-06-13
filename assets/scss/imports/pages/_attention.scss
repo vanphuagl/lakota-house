@@ -259,7 +259,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         ul {
           li {
             justify-content: center;
@@ -325,7 +325,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         &_inner {
           margin-top: 45px;
         }
@@ -369,7 +369,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         p,
         ul {
           margin-bottom: 21px;
@@ -386,7 +386,7 @@
     }
 
     &_gift {
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         .group {
           margin-bottom: 60px;
         }
@@ -404,7 +404,7 @@
         }
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         table {
           margin-bottom: 21px;
 
@@ -428,7 +428,7 @@
         aspect-ratio: 1/1;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         grid-template-columns: repeat(1, 1fr);
         margin-bottom: 25px;
       }
@@ -449,7 +449,7 @@
       letter-spacing: -0.6px;
       font-feature-settings: "palt" 1;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         display: block;
         margin-bottom: 40px;
 
@@ -476,7 +476,7 @@
       line-height: 1.8;
       letter-spacing: -0.6px;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         font-size: 1.4rem;
         letter-spacing: -0.28px;
       }

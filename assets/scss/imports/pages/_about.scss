@@ -1,5 +1,312 @@
 /* ------------------------------- about page ------------------------------- */
 
 .aboutpage {
-    .about {}
+  .about {
+    section.vertical-scrolling {
+      position: relative;
+      height: 100vh;
+
+      .scrollable-element {
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+
+    .fp-auto-height .fp-slide,
+    .fp-auto-height .fp-tableCell,
+    .fp-auto-height.fp-section {
+      height: auto !important;
+    }
+
+    &_mainvisual {
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+
+      &_img {
+        position: relative;
+
+        &:after {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 1;
+          background-color: $black-cl;
+          opacity: 0.2;
+          width: 100%;
+          height: 100%;
+        }
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+
+      &_overlay {
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        bottom: 0;
+        z-index: 5;
+        background: linear-gradient(to top, #000, #fff0);
+        opacity: 0.3;
+        pointer-events: none;
+      }
+
+      &_scrolldown {
+        position: absolute;
+        right: 49px;
+        bottom: 48px;
+        z-index: 10;
+
+        .line {
+          display: block;
+          height: 60px;
+          width: 2px;
+          background-color: rgba(255, 255, 255, 0.3);
+          text-align: center;
+          position: relative;
+          overflow: hidden;
+          margin: 0 auto;
+
+          span {
+            position: absolute;
+            display: block;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 0%;
+            animation: 4s infinite scroll-down-vertical;
+            background-color: #fff;
+          }
+        }
+
+        @include maxW(1024px) {
+          right: 21px;
+          bottom: 25px;
+
+          .line {
+            height: 45px;
+          }
+        }
+      }
+
+      &_introduce {
+        color: $white-cl;
+
+        p {
+          font-size: 2rem;
+          font-weight: 500;
+          line-height: 2;
+        }
+
+        h2 {
+          font-family: var(--itc-fonts);
+          font-weight: 400;
+          font-size: 5.6rem;
+          line-height: 1;
+          letter-spacing: -1.84px;
+        }
+
+        @include maxW(1023px) {
+          p {
+            font-size: 1.6rem;
+          }
+
+          h2 {
+            font-size: 3.2rem;
+            letter-spacing: -1.44px;
+          }
+        }
+      }
+
+      &_heading {
+        position: absolute;
+        top: 230px;
+        left: 50px;
+        z-index: 10;
+        color: $white-cl;
+
+        p {
+          font-size: 1.6rem;
+          font-weight: 500;
+          line-height: 1.63;
+          margin-bottom: 10px;
+        }
+
+        h2 {
+          font-family: var(--itc-fonts);
+          font-weight: 400;
+          font-size: 3.6rem;
+          line-height: 1;
+          letter-spacing: -1.44px;
+        }
+
+        @include maxW(1023px) {
+          top: 150px;
+          left: 22px;
+
+          p {
+            font-size: 1.4rem;
+            line-height: 1.64;
+            margin-bottom: 7px;
+          }
+
+          h2 {
+            font-size: 2.6rem;
+            letter-spacing: -1.04px;
+          }
+        }
+      }
+
+      &_content {
+        position: absolute;
+        bottom: 45px;
+        left: 50px;
+        width: 36.15%;
+        color: $white-cl;
+        z-index: 10;
+
+        @include maxW(1023px) {
+          left: 22px;
+          bottom: 25px;
+          width: 79.78%;
+        }
+      }
+
+      &_desc {
+        margin-top: 36px;
+        font-family: var(--hira-fonts);
+        font-size: 1.5rem;
+        font-weight: 400;
+        line-height: 1.8;
+        letter-spacing: -0.3px;
+        font-feature-settings: "palt" 1;
+
+        @include maxW(1023px) {
+          margin-top: 17px;
+          font-size: 1.4rem;
+          line-height: 1.75;
+          letter-spacing: -0.28px;
+        }
+      }
+
+      &_link {
+        margin-top: 59px;
+        display: flex;
+        gap: 25px;
+
+        a {
+          font-size: 1.6rem;
+          line-height: 1.63;
+          font-weight: 500;
+        }
+
+        @include maxW(1023px) {
+          margin-top: 41px;
+          gap: 20px;
+
+          a {
+            font-size: 1.4rem;
+            line-height: 1.64;
+          }
+        }
+      }
+    }
+
+    &_company {
+      margin-top: 180px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+
+      &_left {
+        h2 {
+          font-size: 2rem;
+          font-weight: 500;
+          line-height: 1.7;
+        }
+      }
+
+      &_right {
+        grid-column: 2/4;
+      }
+
+      @include maxW(1024px) {
+        display: block;
+        margin-top: 80px;
+
+        &_left {
+          h2 {
+            font-size: 1.8rem;
+          }
+        }
+
+        &_right {
+          margin-top: 25px;
+        }
+      }
+
+      &_items {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 40px;
+
+        padding: 40px 0;
+        border-bottom: 1px solid #ccc;
+
+        &:first-child {
+          border-top: 1px solid #ccc;
+        }
+
+        p {
+          font-family: var(--hira-fonts);
+          font-size: 1.5rem;
+          font-weight: 400;
+          line-height: 1.7;
+          letter-spacing: -0.6px;
+        }
+
+        @include maxW(1024px) {
+          display: block;
+          padding: 23px 0;
+
+          p {
+            font-size: 1.4rem;
+            letter-spacing: -0.28px;
+            line-height: 1.82;
+          }
+        }
+      }
+
+      &_content {
+        grid-column: 2/4;
+
+        @include maxW(1023px) {
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .bg-1 {
+    background-color: antiquewhite;
+  }
+  .bg-2 {
+    background-color: chocolate;
+  }
+  .bg-3 {
+    background-color: cadetblue;
+  }
+  .bg-4 {
+    background-color: brown;
+  }
+  .bg-5 {
+    background-color: darkkhaki;
+  }
 }
