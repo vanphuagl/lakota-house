@@ -42,7 +42,7 @@
 
 <body class="fadeout">
     <!-- @header -->
-    <header class="c-header">
+    <header class="c-header js-header-top c-header--white">
         <div class="c-header_container">
             <div class="c-header_left">
                 <ul class="c-header_list">
@@ -647,10 +647,180 @@
     <!-- @@cart -->
 
     <!-- @main -->
-    <main class="shoppage">
-        <section class="detail">
-            <div class="detail_container"></div>
+    <main class="shoppage" id="detailshoppage">
+        <!-- //mainvisual -->
+        <section class="mainvisual js-mainvisual">
+            <div class="mainvisual_container">
+                <div class="mainvisual_swiper js-mainvisual-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="mainvisual_items">
+                                <picture>
+                                    <source media="(max-width: 1024px)" srcset="/assets/img/top/top_slide_1.webp">
+                                    <img draggable="false" src="/assets/img/top/top_slide_1.webp"
+                                        alt="Alden N1104 Re-Stock" width="1440" height="779">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="mainvisual_items">
+                                <picture>
+                                    <source media="(max-width: 1024px)"
+                                        srcset="https://muracodesigns.com/cdn/shop/files/tentandshelter_pc.jpg">
+                                    <img draggable="false"
+                                        src="https://muracodesigns.com/cdn/shop/files/tentandshelter_pc.jpg"
+                                        alt="Alden Exclusive" width="1440" height="779">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="mainvisual_items">
+                                <picture>
+                                    <source media="(max-width: 1024px)"
+                                        srcset="https://muracodesigns.com/cdn/shop/files/PENELOPE_PC_1.jpg">
+                                    <img draggable="false"
+                                        src="https://muracodesigns.com/cdn/shop/files/PENELOPE_PC_1.jpg"
+                                        alt="The Lakota House" width="1440" height="779">
+                                </picture>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="swiper-pagination --pad"></div>
+                </div>
+
+                <div class="mainvisual_heading --pad">
+                    <h2>
+                        The Lakota House <br />
+                        Aoyama
+                    </h2>
+                </div>
+
+                <div class="mainvisual_scrolldown">
+                    <div class="line"><span></span></div>
+                </div>
+            </div>
         </section>
+        <!-- //mainvisual -->
+
+        <!-- //detail -->
+        <section class="detail js-offset-top">
+            <div class="detail_container">
+                <div class="detail_inner --pad">
+                    <div class="detail_left">
+                        <div class="detail_sticky js-detail-sticky">
+                            <h2>
+                                The Lakota House <br />
+                                Aoyama
+                            </h2>
+                        </div>
+
+                        <div class="detail_back js-detail-backtolist">
+                            <a href="/pages/shop/" class="c-btn-link pc-only">Back to List</a>
+                        </div>
+                    </div>
+                    <div class="detail_right">
+                        <div class="detail_desc">
+                            <p>
+                                ショップ紹介テキストが入りますショップ紹介テキストが入りますショップ紹介テキストが入りますショップ紹介テキストが入りますショップ紹介テキストが入りますショップ紹介テキストが入りますショップ紹介テキストが入りますショップ紹介テキストが入りますショップ紹介テキストが入りますショップ紹介テキストが入りますショップ紹介テキストが入りますショップ紹介テキストが入りますショップ紹介テキストが入りますショップ紹介テキストが入りますショップ紹介テキストが入りますショップ紹介テキストが入りますショップ紹介テキストが入りますショップ紹介テキストが入りますショップ紹介テキストが入ります
+                            </p>
+                        </div>
+
+                        <div class="detail_list">
+                            <div class="detail_items">
+                                <div class="detail_label">
+                                    <h3>Place</h3>
+                                </div>
+                                <div class="detail_content">
+                                    <p>
+                                        東京都港区南青山6-12-14 NOA南青山1F <br />
+                                        東京メトロ半蔵門線「青山一丁目駅」5番出口より徒歩12分
+                                    </p>
+                                    <div class="detail_map">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d810.4172288610872!2d139.7146024!3d35.660528!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188b66ce00778b%3A0x6b2956f57f1f315f!2sTHE%20LAKOTA%20HOUSE!5e0!3m2!1sen!2s!4v1718245633630!5m2!1sja!2s"
+                                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="detail_items">
+                                <div class="detail_label">
+                                    <h3>Tel</h3>
+                                </div>
+                                <div class="detail_content">
+                                    <p>03-5778-2010</p>
+                                </div>
+                            </div>
+                            <div class="detail_items">
+                                <div class="detail_label">
+                                    <h3>Open</h3>
+                                </div>
+                                <div class="detail_content">
+                                    <p>12:00 – 20:00</p>
+                                </div>
+                            </div>
+                            <div class="detail_items">
+                                <div class="detail_label">
+                                    <h3>Closed</h3>
+                                </div>
+                                <div class="detail_content">
+                                    <p>水曜日（祝日除く）</p>
+                                </div>
+                            </div>
+                            <div class="detail_items">
+                                <div class="detail_label">
+                                    <h3>Services</h3>
+                                </div>
+                                <div class="detail_content">
+                                    <p>
+                                        フィッティングサービス <br />
+                                        メーカー純正パーツによるリペアサービス
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="detail_gallery">
+                            <div class="detail_gallery_img">
+                                <figure>
+                                    <img src="/assets/img/shop/shop_gallery_1.webp" alt="The Lakota House Aoyama"
+                                        loading="lazy" width="880" height="586">
+                                </figure>
+                            </div>
+                            <div class="detail_gallery_img is-group">
+                                <figure>
+                                    <img src="/assets/img/shop/shop_gallery_2.webp" alt="The Lakota House Aoyama"
+                                        loading="lazy" width="435" height="652">
+                                </figure>
+                                <figure>
+                                    <img src="/assets/img/shop/shop_gallery_3.webp" alt="The Lakota House Aoyama"
+                                        loading="lazy" width="435" height="652">
+                                </figure>
+                            </div>
+                            <div class="detail_gallery_img">
+                                <figure>
+                                    <img src="/assets/img/shop/shop_gallery_4.webp" alt="The Lakota House Aoyama"
+                                        loading="lazy" width="880" height="586">
+                                </figure>
+                            </div>
+                            <div class="detail_gallery_img is-group">
+                                <figure>
+                                    <img src="/assets/img/shop/shop_gallery_5.webp" alt="The Lakota House Aoyama"
+                                        loading="lazy" width="435" height="652">
+                                </figure>
+                                <figure>
+                                    <img src="/assets/img/shop/shop_gallery_6.webp" alt="The Lakota House Aoyama"
+                                        loading="lazy" width="435" height="652">
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- detail// -->
+
     </main>
     <!-- @@main -->
 
@@ -767,6 +937,8 @@
     <script src="/assets/js/libs.js"></script>
     <script src="/assets/js/jb.tracker.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/header.js"></script>
+    <script src="/assets/js/shop.js"></script>
 </body>
 
 </html>

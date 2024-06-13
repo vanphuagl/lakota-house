@@ -1,6 +1,43 @@
+
+/* ------------------------- shop detail mainvisual ------------------------- */
+
+const swiperMainvisual = new Swiper(".js-mainvisual-swiper", {
+    effect: "fade",
+    speed: 1200,
+    autoplay: {
+        delay: 6000,
+        disableOnInteraction: false,
+    },
+    allowTouchMove: false,
+    pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + "0" + (index + 1) + "</span>";
+        },
+    }
+});
+
+/* --------------------------- scroll shop detail --------------------------- */
+
+if (document.getElementById('detailshoppage')) {
+    $(window).on("pageshow scroll", function () {
+        let hSizeDetail = $(".js-offset-top").offset().top,
+            scrollDetail = $(window).scrollTop(),
+            bottomDetail = $(".js-offset-top").height();
+
+        scrollDetail + 80 >= hSizeDetail
+            ? $(".js-detail-sticky, .js-detail-backtolist").addClass("is-show")
+            : $(".js-detail-sticky, .js-detail-backtolist").removeClass("is-show");
+
+        scrollDetail >= bottomDetail
+            && $(".js-detail-backtolist").removeClass("is-show")
+    });
+}
+
 /* ------------------------------ stockist page ----------------------------- */
 
-if ($("#stockist")) {
+if (document.getElementById('stockist')) {
     let filterActive;
 
     function filterCategory(category) {
