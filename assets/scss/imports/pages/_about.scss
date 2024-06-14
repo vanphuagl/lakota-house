@@ -5,12 +5,17 @@
     section.vertical-scrolling {
       position: relative;
       height: 100vh;
+      background-color: #f7f5f0;
 
       .scrollable-element {
         height: 100%;
         width: 100%;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
+
+        &::-webkit-scrollbar {
+          width: 0;
+        }
       }
     }
 
@@ -61,7 +66,7 @@
       &_scrolldown {
         position: absolute;
         right: 49px;
-        bottom: 48px;
+        bottom: 40px;
         z-index: 10;
 
         .line {
@@ -103,6 +108,7 @@
           font-size: 2rem;
           font-weight: 500;
           line-height: 2;
+          margin-bottom: 2px;
         }
 
         h2 {
@@ -116,6 +122,7 @@
         @include maxW(1023px) {
           p {
             font-size: 1.6rem;
+            margin-bottom: 0;
           }
 
           h2 {
@@ -148,7 +155,7 @@
         }
 
         @include maxW(1023px) {
-          top: 150px;
+          top: 147px;
           left: 22px;
 
           p {
@@ -166,7 +173,7 @@
 
       &_content {
         position: absolute;
-        bottom: 45px;
+        bottom: 40px;
         left: 50px;
         width: 36.15%;
         color: $white-cl;
@@ -174,24 +181,24 @@
 
         @include maxW(1023px) {
           left: 22px;
-          bottom: 25px;
+          bottom: 22px;
           width: 79.78%;
         }
       }
 
       &_desc {
-        margin-top: 36px;
+        margin-top: 40px;
         font-family: var(--hira-fonts);
         font-size: 1.5rem;
         font-weight: 400;
-        line-height: 1.8;
+        line-height: 1.6;
         letter-spacing: -0.3px;
         font-feature-settings: "palt" 1;
 
         @include maxW(1023px) {
-          margin-top: 17px;
+          margin-top: 20px;
           font-size: 1.4rem;
-          line-height: 1.75;
+          line-height: 1.5;
           letter-spacing: -0.28px;
         }
       }
@@ -229,7 +236,7 @@
         h2 {
           font-size: 2rem;
           font-weight: 500;
-          line-height: 1.7;
+          line-height: 1.4;
         }
       }
 
@@ -254,9 +261,8 @@
 
       &_items {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 40px;
-
+        grid-template-columns: 28% 1fr;
+        gap: 10px;
         padding: 40px 0;
         border-bottom: 1px solid #ccc;
 
@@ -285,28 +291,10 @@
       }
 
       &_content {
-        grid-column: 2/4;
-
         @include maxW(1023px) {
           margin-top: 5px;
         }
       }
     }
-  }
-
-  .bg-1 {
-    background-color: antiquewhite;
-  }
-  .bg-2 {
-    background-color: chocolate;
-  }
-  .bg-3 {
-    background-color: cadetblue;
-  }
-  .bg-4 {
-    background-color: brown;
-  }
-  .bg-5 {
-    background-color: darkkhaki;
   }
 }

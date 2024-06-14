@@ -174,10 +174,10 @@
 
       .swiper-pagination {
         position: absolute;
-        bottom: 37px;
+        bottom: 32px;
         text-align: left;
         display: flex;
-        gap: 20px;
+        gap: 18px;
       }
 
       .swiper-pagination-bullet {
@@ -198,7 +198,7 @@
       @include maxW(1024px) {
         .swiper-pagination {
           gap: 12px;
-          bottom: 20px;
+          bottom: 16px;
         }
 
         .swiper-pagination-bullet {
@@ -260,7 +260,7 @@
     &_scrolldown {
       position: absolute;
       right: 49px;
-      bottom: 48px;
+      bottom: 40px;
       z-index: 2;
 
       .line {
@@ -302,7 +302,7 @@
       padding-top: 230px;
 
       @include maxW(1024px) {
-        padding-top: 75px;
+        padding-top: 77px;
       }
     }
 
@@ -328,23 +328,23 @@
       font-family: var(--hira-fonts);
       font-size: 1.5rem;
       font-weight: 400;
-      line-height: 1.8;
+      line-height: 1.6;
       letter-spacing: -0.3px;
       font-feature-settings: "palt" 1;
       text-align: justify;
 
       @include maxW(1024px) {
         font-size: 1.4rem;
-        line-height: 1.82;
+        line-height: 1.65;
         letter-spacing: -0.28px;
       }
     }
 
     &_list {
-      margin-top: 99px;
+      margin-top: 95px;
 
       @include maxW(1024px) {
-        margin-top: 121px;
+        margin-top: 118px;
       }
     }
 
@@ -352,7 +352,7 @@
       display: grid;
       grid-template-columns: repeat(5, 1fr);
       gap: 20px;
-      padding: 41px 0;
+      padding: 42px 0 40px;
       border-bottom: 1px solid #ccc;
 
       &:first-child {
@@ -361,7 +361,7 @@
 
       @include maxW(1024px) {
         display: block;
-        padding: 30px 0;
+        padding: 32px 0 25px;
       }
     }
 
@@ -393,7 +393,7 @@
       }
 
       @include maxW(1024px) {
-        margin-top: 12px;
+        margin-top: 15px;
 
         p,
         a {
