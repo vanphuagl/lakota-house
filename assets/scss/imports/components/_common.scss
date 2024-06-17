@@ -23,6 +23,7 @@
 
       &.active {
         opacity: 1;
+        font-weight: 600;
       }
 
       &:last-child {
@@ -436,7 +437,8 @@
         border-radius: 5px;
         padding: 0 25px 0 8px;
         margin-left: -8px;
-        background: url(../img/arrow-down-black.webp) no-repeat center right rgba(0, 0, 0, 0);
+        background: url("https://cdn.shopify.com/s/files/1/0439/8566/6198/files/arrow-down-black.webp?v=1718112234")
+          no-repeat center right rgba(0, 0, 0, 0);
         background-size: 12px 6px;
       }
 
@@ -536,7 +538,7 @@
 
     &:hover {
       .c-prodsw_cusbtn {
-        transform: translateZ(0);
+        transform: translate3d(0, -50%, 0);
       }
     }
 
@@ -548,7 +550,8 @@
   &_cusbtn {
     position: absolute;
     z-index: 60;
-    top: calc(50% - 80px);
+    top: 50%;
+    transform: translateY(-50%);
     display: flex;
     width: 80px;
     height: 80px;
@@ -568,15 +571,15 @@
     }
 
     &.swiper-button-disabled.c-prodsw_cusbtn_prev {
-      transform: translate3d(-80px, 0, 0);
+      transform: translate3d(-80px, -50%, 0);
     }
     &.swiper-button-disabled.c-prodsw_cusbtn_next {
-      transform: translate3d(80px, 0, 0);
+      transform: translate3d(80px, -50%, 0);
     }
 
     &_next {
       right: 0;
-      transform: translate3d(80px, 0, 0);
+      transform: translate3d(80px, -50%, 0);
 
       svg {
         margin-left: 5px;
@@ -585,7 +588,7 @@
 
     &_prev {
       left: 0;
-      transform: translate3d(-80px, 0, 0);
+      transform: translate3d(-80px, -50%, 0);
     }
 
     @include maxW(1024px) {
@@ -625,7 +628,7 @@
       transition: opacity 0.8s;
     }
 
-    &:hover {
+    &--hover-effect:hover {
       .img-front {
         opacity: 0;
       }
@@ -645,6 +648,10 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
+
+    .price {
+      color: $black-cl;
+    }
 
     @include maxW(1024px) {
       margin-top: 7px;

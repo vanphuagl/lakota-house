@@ -1008,6 +1008,7 @@
       margin: auto;
       max-height: 85%;
       overflow: auto;
+      position: relative;
 
       @include customscroll();
 
@@ -1022,6 +1023,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      position: absolute;
+      z-index: 1;
 
       h2 {
         font-size: 2rem;
@@ -1032,6 +1035,18 @@
         h2 {
           font-size: 1.6rem;
         }
+      }
+    }
+
+    &_close {
+      position: sticky;
+      top: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      @include maxW(1024px) {
+        top: 0px;
       }
     }
 
