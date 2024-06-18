@@ -422,8 +422,7 @@
 
     &_inner {
       display: grid;
-      grid-template-columns: 40% 1fr;
-      gap: 120px;
+      grid-template-columns: repeat(2,1fr);
       padding: 0 120px;
       position: relative;
 
@@ -437,9 +436,11 @@
     &_sticky {
       position: sticky;
       top: 150px;
+      padding-right: 120px;
 
       @include maxW(1024px) {
         position: unset;
+        padding-right: 0;
       }
 
       &_category {
