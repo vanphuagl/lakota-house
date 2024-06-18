@@ -2,7 +2,7 @@
 
 .shoppage {
   .--pad-sp {
-    @include maxW(1023px) {
+    @include maxW(1024px) {
       padding: 0 22px;
     }
   }
@@ -575,7 +575,7 @@
         margin-top: -3px;
       }
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         h2 {
           font-size: 1.4rem;
           line-height: 1.68;

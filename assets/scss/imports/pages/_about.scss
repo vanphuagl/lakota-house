@@ -119,7 +119,7 @@
           letter-spacing: -1.84px;
         }
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           p {
             font-size: 1.6rem;
             margin-bottom: 0;
@@ -154,7 +154,7 @@
           letter-spacing: -1.44px;
         }
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           top: 147px;
           left: 22px;
 
@@ -179,7 +179,7 @@
         color: $white-cl;
         z-index: 10;
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           left: 22px;
           bottom: 22px;
           width: 79.78%;
@@ -195,7 +195,7 @@
         letter-spacing: -0.3px;
         font-feature-settings: "palt" 1;
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           margin-top: 20px;
           font-size: 1.4rem;
           line-height: 1.5;
@@ -214,7 +214,7 @@
           font-weight: 500;
         }
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           margin-top: 41px;
           gap: 20px;
 
@@ -291,7 +291,7 @@
       }
 
       &_content {
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           margin-top: 5px;
         }
       }

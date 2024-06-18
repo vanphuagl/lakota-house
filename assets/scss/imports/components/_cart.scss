@@ -80,6 +80,7 @@
       font-size: 2rem;
       font-weight: 500;
       line-height: 1.68;
+      margin-bottom: 0;
     }
 
     @include maxW(1024px) {
@@ -110,10 +111,11 @@
   }
 
   &_list {
-    margin-top: 35px;
+    margin-top: 25px;
 
     @include maxW(1024px) {
-      margin-top: 27px;
+      margin-top: 17px;
+      padding-bottom: 0;
     }
   }
 

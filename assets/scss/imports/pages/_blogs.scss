@@ -176,7 +176,7 @@
       text-overflow: ellipsis;
       overflow: hidden;
 
-      @include maxW(1023px) {
+      @include maxW(1024px) {
         margin-top: 8px;
         font-size: 1.4rem;
         line-height: 1.86;
@@ -250,7 +250,7 @@
         letter-spacing: -0.64px;
         line-height: 1.75;
 
-        @include maxW(1023px) {
+        @include maxW(1024px) {
           margin-top: 13px;
           font-size: 1.4rem;
           letter-spacing: -0.56px;
