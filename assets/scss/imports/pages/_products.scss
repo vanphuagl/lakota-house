@@ -567,10 +567,12 @@
       position: relative;
 
       ul {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        // display: grid;
+        // grid-template-columns: repeat(3, 1fr);
+        display: flex;
 
         li {
+          flex: 1;
           display: flex;
           justify-content: center;
           align-items: center;
