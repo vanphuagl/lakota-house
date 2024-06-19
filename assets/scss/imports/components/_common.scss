@@ -603,6 +603,7 @@
     position: relative;
     font-size: 1.5rem;
     line-height: 1.64;
+    margin-bottom: 15px;
 
     p.label {
       position: absolute;
@@ -613,6 +614,7 @@
 
     @include maxW(1024px) {
       font-size: 1.2rem;
+      margin-bottom: 7px;
 
       p.label {
         top: 10px;
@@ -644,23 +646,46 @@
   }
 
   &_info {
-    margin-top: 15px;
     display: flex;
     justify-content: space-between;
     gap: 10px;
 
-    .price {
+    &.is-soldout {
+      .price {
+        text-decoration: line-through;
+      }
+    }
+
+    p,
+    .price,
+    .soldout {
+      font-size: 1.5rem;
+      font-weight: 500;
       color: $black-cl;
+      display: block;
+    }
+
+    .soldout {
+      opacity: 0.5;
     }
 
     @include maxW(1024px) {
-      margin-top: 7px;
       display: block;
 
-      p {
+      p,
+      .price,
+      .soldout {
         font-size: 1.3rem;
         line-height: 1.4;
       }
+    }
+  }
+
+  &_avail {
+    @include maxW(1024px) {
+      display: flex;
+      gap: 10px;
+      align-items: center;
     }
   }
 
@@ -668,7 +693,6 @@
     opacity: 0.5;
     width: fit-content;
     font-size: 1.5rem;
-    line-height: 1;
 
     &:hover {
       opacity: 0.5;

@@ -413,7 +413,6 @@
     &_swiper {
       @include maxW(1024px) {
         .c-card_info {
-          margin-top: 14px;
           display: flex;
         }
       }
